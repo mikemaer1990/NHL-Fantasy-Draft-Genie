@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHL Draft Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .header h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .dataset-selector {
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+            color: #495057;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .dataset-selector:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+        }
+
+        .reset-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reset-btn:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            height: calc(100vh - 140px);
+        }
+
+        .panel {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .panel h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            color: #2a5298;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .player-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #2a5298;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .player-details h4 {
+            color: #1e3c72;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .player-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .player-ranks {
+            text-align: right;
+            font-size: 0.85rem;
+            color: #495057;
+        }
+
+        .player-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-draft {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-draft:hover {
+            background: #218838;
+            transform: translateY(-1px);
+        }
+
+        .btn-remove {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-remove:hover {
+            background: #5a6268;
+            transform: translateY(-1px);
+        }
+
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .position-slot {
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .position-slot.empty {
+            background: #f8f9fa;
+            color: #6c757d;
+        }
+
+        .position-slot.filled {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+        }
+
+        .position-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .player-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .position-groups {
+            display: grid;
+            gap: 20px;
+        }
+
+        .position-group {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .position-group h4 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .position-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .header-controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🏒 NHL Draft Assistant</h1>
+            <div class="header-controls">
+                <select class="dataset-selector" id="datasetSelector" onchange="switchDataset()">
+                    <option value="player_data2.json">ESPN Rankings (175 players)</option>
+                    <option value="player_data.json">Consensus Rankings (250 players)</option>
+                </select>
+                <button class="reset-btn" onclick="resetDraft()">Reset Draft</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="panel">
+                <h2>Available Players</h2>
+
+                <div class="search-container">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search players by name..." onkeyup="filterPlayers()">
+                </div>
+
+                <div class="section">
+                    <h3>🏆 Top Overall Available</h3>
+                    <div id="topOverall"></div>
+                </div>
+
+                <div class="section">
+                    <h3>📊 Best by Position</h3>
+                    <div id="bestByPosition"></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>My Team</h2>
+
+                <div class="position-groups">
+                    <div class="position-group">
+                        <h4>Forwards</h4>
+                        <div class="position-slots">
+                            <div class="position-slot empty" data-position="C" data-slot="0">
+                                <div class="position-label">C1</div>
+                            </div>
+                            <div class="position-slot empty" data-position="C" data-slot="1">
+                                <div class="position-label">C2</div>
+                            </div>
+                            <div class="position-slot empty" data-position="C" data-slot="2">
+                                <div class="position-label">C3</div>
+                            </div>
+                            <div class="position-slot empty" data-position="LW" data-slot="0">
+                                <div class="position-label">LW1</div>
+                            </div>
+                            <div class="position-slot empty" data-position="LW" data-slot="1">
+                                <div class="position-label">LW2</div>
+                            </div>
+                            <div class="position-slot empty" data-position="LW" data-slot="2">
+                                <div class="position-label">LW3</div>
+                            </div>
+                            <div class="position-slot empty" data-position="RW" data-slot="0">
+                                <div class="position-label">RW1</div>
+                            </div>
+                            <div class="position-slot empty" data-position="RW" data-slot="1">
+                                <div class="position-label">RW2</div>
+                            </div>
+                            <div class="position-slot empty" data-position="RW" data-slot="2">
+                                <div class="position-label">RW3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="position-group">
+                        <h4>Defense</h4>
+                        <div class="position-slots">
+                            <div class="position-slot empty" data-position="D" data-slot="0">
+                                <div class="position-label">D1</div>
+                            </div>
+                            <div class="position-slot empty" data-position="D" data-slot="1">
+                                <div class="position-label">D2</div>
+                            </div>
+                            <div class="position-slot empty" data-position="D" data-slot="2">
+                                <div class="position-label">D3</div>
+                            </div>
+                            <div class="position-slot empty" data-position="D" data-slot="3">
+                                <div class="position-label">D4</div>
+                            </div>
+                            <div class="position-slot empty" data-position="D" data-slot="4">
+                                <div class="position-label">D5</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="position-group">
+                        <h4>Goalies</h4>
+                        <div class="position-slots">
+                            <div class="position-slot empty" data-position="G" data-slot="0">
+                                <div class="position-label">G1</div>
+                            </div>
+                            <div class="position-slot empty" data-position="G" data-slot="1">
+                                <div class="position-label">G2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="position-group">
+                        <h4>Bench</h4>
+                        <div class="position-slots">
+                            <div class="position-slot empty" data-position="BENCH" data-slot="0">
+                                <div class="position-label">BN1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allPlayers = [];
+        let availablePlayers = [];
+        let myTeam = [];
+        let currentDataset = 'player_data2.json';
+        let roster = {
+            C: [null, null, null],
+            LW: [null, null, null],
+            RW: [null, null, null],
+            D: [null, null, null, null, null],
+            G: [null, null],
+            BENCH: [null]
+        };
+
+        async function loadPlayerData(filename = currentDataset) {
+            try {
+                const response = await fetch(filename);
+                const data = await response.json();
+                allPlayers = data.players;
+                availablePlayers = [...allPlayers];
+                updateDisplays();
+            } catch (error) {
+                console.error('Error loading player data:', error);
+                document.getElementById('topOverall').innerHTML = '<div class="empty-state">Error loading player data</div>';
+            }
+        }
+
+        function switchDataset() {
+            const selector = document.getElementById('datasetSelector');
+            currentDataset = selector.value;
+
+            // Reset the draft when switching datasets
+            resetDraft();
+
+            // Load new dataset
+            loadPlayerData(currentDataset);
+        }
+
+        function createPlayerCard(player) {
+            const positions = player.dualEligible ?
+                player.espnPosition.split(',').map(p => p.trim()).join('/') :
+                player.position;
+
+            return `
+                <div class="player-card">
+                    <div class="player-info">
+                        <div class="player-details">
+                            <h4>${player.name}</h4>
+                            <div class="player-meta">${positions} - ${player.team}</div>
+                        </div>
+                        <div class="player-ranks">
+                            <div>Overall: #${player.overallRank}</div>
+                            <div>Position: #${player.positionRank}</div>
+                        </div>
+                    </div>
+                    <div class="player-actions">
+                        <button class="btn btn-draft" onclick="draftPlayer(${player.id})">Draft</button>
+                        <button class="btn btn-remove" onclick="removePlayer(${player.id})">Others Drafted</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateTopOverall() {
+            const topPlayers = availablePlayers
+                .sort((a, b) => a.overallRank - b.overallRank)
+                .slice(0, 10);
+
+            const container = document.getElementById('topOverall');
+            if (topPlayers.length === 0) {
+                container.innerHTML = '<div class="empty-state">No players available</div>';
+                return;
+            }
+
+            container.innerHTML = topPlayers.map(createPlayerCard).join('');
+        }
+
+        function updateBestByPosition() {
+            const positions = ['C', 'LW', 'RW', 'D', 'G'];
+            const container = document.getElementById('bestByPosition');
+
+            let html = '';
+            positions.forEach(position => {
+                const positionPlayers = availablePlayers
+                    .filter(player => {
+                        if (player.dualEligible) {
+                            return player.espnPosition.includes(position);
+                        }
+                        return player.position === position;
+                    })
+                    .sort((a, b) => a.positionRank - b.positionRank)
+                    .slice(0, 3);
+
+                if (positionPlayers.length > 0) {
+                    html += `
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: #495057; margin-bottom: 10px;">${position}</h4>
+                            ${positionPlayers.map(createPlayerCard).join('')}
+                        </div>
+                    `;
+                }
+            });
+
+            if (html === '') {
+                container.innerHTML = '<div class="empty-state">No players available by position</div>';
+            } else {
+                container.innerHTML = html;
+            }
+        }
+
+        function draftPlayer(playerId) {
+            const player = availablePlayers.find(p => p.id === playerId);
+            if (!player) return;
+
+            const assignedPosition = assignToRoster(player);
+            if (assignedPosition) {
+                availablePlayers = availablePlayers.filter(p => p.id !== playerId);
+                myTeam.push({...player, assignedPosition});
+                updateDisplays();
+            }
+        }
+
+        function assignToRoster(player) {
+            const positions = player.dualEligible ?
+                player.espnPosition.split(',').map(p => p.trim()) :
+                [player.position];
+
+            for (const position of positions) {
+                if (roster[position]) {
+                    const emptySlot = roster[position].findIndex(slot => slot === null);
+                    if (emptySlot !== -1) {
+                        roster[position][emptySlot] = player;
+                        updateRosterSlot(position, emptySlot, player);
+                        return `${position}${emptySlot + 1}`;
+                    }
+                }
+            }
+
+            const benchSlot = roster.BENCH.findIndex(slot => slot === null);
+            if (benchSlot !== -1) {
+                roster.BENCH[benchSlot] = player;
+                updateRosterSlot('BENCH', benchSlot, player);
+                return `BN${benchSlot + 1}`;
+            }
+
+            alert('Roster is full!');
+            return null;
+        }
+
+        function updateRosterSlot(position, slot, player) {
+            const slotElement = document.querySelector(`[data-position="${position}"][data-slot="${slot}"]`);
+            if (slotElement) {
+                slotElement.className = 'position-slot filled';
+                slotElement.innerHTML = `
+                    <div class="position-label">${position === 'BENCH' ? 'BN' : position}${slot + 1}</div>
+                    <div class="player-name">${player.name}</div>
+                `;
+            }
+        }
+
+        function removePlayer(playerId) {
+            availablePlayers = availablePlayers.filter(p => p.id !== playerId);
+            updateDisplays();
+        }
+
+        function filterPlayers() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            if (searchTerm === '') {
+                availablePlayers = allPlayers.filter(player =>
+                    !myTeam.some(teamPlayer => teamPlayer.id === player.id)
+                );
+            } else {
+                availablePlayers = allPlayers.filter(player =>
+                    player.name.toLowerCase().includes(searchTerm) &&
+                    !myTeam.some(teamPlayer => teamPlayer.id === player.id)
+                );
+            }
+            updateDisplays();
+        }
+
+        function updateDisplays() {
+            updateTopOverall();
+            updateBestByPosition();
+        }
+
+        function resetDraft() {
+            availablePlayers = [...allPlayers];
+            myTeam = [];
+            roster = {
+                C: [null, null, null],
+                LW: [null, null, null],
+                RW: [null, null, null],
+                D: [null, null, null, null, null],
+                G: [null, null],
+                BENCH: [null]
+            };
+
+            document.querySelectorAll('.position-slot').forEach(slot => {
+                const position = slot.dataset.position;
+                const slotNum = parseInt(slot.dataset.slot);
+                slot.className = 'position-slot empty';
+                slot.innerHTML = `
+                    <div class="position-label">${position === 'BENCH' ? 'BN' : position}${slotNum + 1}</div>
+                `;
+            });
+
+            document.getElementById('searchInput').value = '';
+            updateDisplays();
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPlayerData);
+    </script>
+</body>
+</html>
