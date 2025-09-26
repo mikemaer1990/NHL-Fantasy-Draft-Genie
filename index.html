@@ -127,6 +127,7 @@
 
         .section {
             margin-bottom: 30px;
+            width: 100%;
         }
 
         .section h3 {
@@ -410,11 +411,86 @@
             }
         }
 
+        /* Tab styling */
+        .tab-nav {
+            display: flex;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+            overflow-x: auto;
+            gap: 2px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px 12px;
+            border: none;
+            background: transparent;
+            color: #6c757d;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .tab-btn.active {
+            background: #2a5298;
+            color: white;
+            box-shadow: 0 2px 8px rgba(42, 82, 152, 0.3);
+        }
+
+        .tab-content {
+            width: 100%;
+            min-height: 200px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+            overflow: visible;
+        }
+
+        .tab-pane .player-card {
+            width: 100%;
+            max-width: 600px;
+        }
+
         /* Responsive styling for mobile */
         @media (max-width: 768px) {
             .dropdown-pointer {
                 font-size: 0.8rem;
                 padding: 6px 10px;
+            }
+
+            .tab-nav {
+                padding: 2px;
+                gap: 1px;
+            }
+
+            .tab-btn {
+                min-width: 80px;
+                padding: 8px 12px;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -445,8 +521,10 @@
                 </div>
 
                 <div class="section">
-                    <h3>🏆 Top Overall Available</h3>
-                    <div id="topOverall">
+                    <h3>🏆 Available Players</h3>
+
+                    <!-- Welcome message for when no dataset selected -->
+                    <div id="welcomeContainer">
                         <div class="welcome-message">
                             <h4>Welcome to NHL Fantasy Draft Genie! 🏒</h4>
                             <p>Select a dataset from the dropdown menu in the top right to start your draft:</p>
@@ -457,12 +535,25 @@
                             <p>Then use the search bar and draft tools to build your perfect fantasy team!</p>
                         </div>
                     </div>
-                </div>
 
-                <div class="section">
-                    <h3>📊 Best by Position</h3>
-                    <div id="bestByPosition">
-                        <div class="empty-state">Select a dataset above to view players by position</div>
+                    <!-- Tab navigation -->
+                    <div class="tab-nav" id="tabNav" style="display: none;">
+                        <button class="tab-btn active" data-tab="overall">Overall</button>
+                        <button class="tab-btn" data-tab="C">C</button>
+                        <button class="tab-btn" data-tab="LW">LW</button>
+                        <button class="tab-btn" data-tab="RW">RW</button>
+                        <button class="tab-btn" data-tab="D">D</button>
+                        <button class="tab-btn" data-tab="G">G</button>
+                    </div>
+
+                    <!-- Tab content -->
+                    <div class="tab-content" id="tabContent" style="display: none;">
+                        <div class="tab-pane active" id="tab-overall"></div>
+                        <div class="tab-pane" id="tab-C"></div>
+                        <div class="tab-pane" id="tab-LW"></div>
+                        <div class="tab-pane" id="tab-RW"></div>
+                        <div class="tab-pane" id="tab-D"></div>
+                        <div class="tab-pane" id="tab-G"></div>
                     </div>
                 </div>
             </div>
@@ -633,12 +724,41 @@
             `;
         }
 
+        let currentTab = 'overall';
+
+        function switchTab(tabName) {
+            // Update tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+
+            // Update tab panes
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+
+            currentTab = tabName;
+            updateTabContent();
+        }
+
+        function updateTabContent() {
+            if (availablePlayers.length === 0) return;
+
+            if (currentTab === 'overall') {
+                updateTopOverall();
+            } else {
+                updatePositionTab(currentTab);
+            }
+        }
+
         function updateTopOverall() {
             const topPlayers = availablePlayers
                 .sort((a, b) => a.overallRank - b.overallRank)
-                .slice(0, 10);
+                .slice(0, 15);
 
-            const container = document.getElementById('topOverall');
+            const container = document.getElementById('tab-overall');
             if (topPlayers.length === 0) {
                 container.innerHTML = '<div class="empty-state">No players available</div>';
                 return;
@@ -647,37 +767,24 @@
             container.innerHTML = topPlayers.map(createPlayerCard).join('');
         }
 
-        function updateBestByPosition() {
-            const positions = ['C', 'LW', 'RW', 'D', 'G'];
-            const container = document.getElementById('bestByPosition');
+        function updatePositionTab(position) {
+            const positionPlayers = availablePlayers
+                .filter(player => {
+                    if (player.dualEligible) {
+                        return player.espnPosition.includes(position);
+                    }
+                    return player.position === position;
+                })
+                .sort((a, b) => a.positionRank - b.positionRank)
+                .slice(0, 12);
 
-            let html = '';
-            positions.forEach(position => {
-                const positionPlayers = availablePlayers
-                    .filter(player => {
-                        if (player.dualEligible) {
-                            return player.espnPosition.includes(position);
-                        }
-                        return player.position === position;
-                    })
-                    .sort((a, b) => a.positionRank - b.positionRank)
-                    .slice(0, 3);
-
-                if (positionPlayers.length > 0) {
-                    html += `
-                        <div style="margin-bottom: 20px;">
-                            <h4 style="color: #495057; margin-bottom: 10px;">${position}</h4>
-                            ${positionPlayers.map(createPlayerCard).join('')}
-                        </div>
-                    `;
-                }
-            });
-
-            if (html === '') {
-                container.innerHTML = '<div class="empty-state">No players available by position</div>';
-            } else {
-                container.innerHTML = html;
+            const container = document.getElementById(`tab-${position}`);
+            if (positionPlayers.length === 0) {
+                container.innerHTML = '<div class="empty-state">No players available for this position</div>';
+                return;
             }
+
+            container.innerHTML = positionPlayers.map(createPlayerCard).join('');
         }
 
         function draftPlayer(playerId) {
@@ -751,8 +858,18 @@
         }
 
         function updateDisplays() {
-            updateTopOverall();
-            updateBestByPosition();
+            if (availablePlayers.length === 0) {
+                // Show welcome message when no data loaded
+                document.getElementById('welcomeContainer').style.display = 'block';
+                document.getElementById('tabNav').style.display = 'none';
+                document.getElementById('tabContent').style.display = 'none';
+            } else {
+                // Show tabs when data is loaded
+                document.getElementById('welcomeContainer').style.display = 'none';
+                document.getElementById('tabNav').style.display = 'flex';
+                document.getElementById('tabContent').style.display = 'block';
+                updateTabContent();
+            }
         }
 
         function resetDraft() {
@@ -807,6 +924,14 @@
 
             // Position the pointer correctly
             positionDropdownPointer();
+
+            // Add tab click event listeners
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const tabName = e.target.getAttribute('data-tab');
+                    switchTab(tabName);
+                });
+            });
 
             // Hide pointer after 10 seconds if user hasn't interacted
             setTimeout(() => {
