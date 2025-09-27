@@ -1,0 +1,50 @@
+1. Cale Makar, D, COL
+2. Quinn Hughes, D, VAN
+3. Zach Werenski, D, CBJ
+4. Victor Hedman, D, TBL
+5. Evan Bouchard, D, EDM
+6. Rasmus Dahlin, D, BUF
+7. Moritz Seider, D, DET
+8. Lane Hutson, D, MTL
+9. Jake Sanderson, D, OTT
+10. Thomas Harley, D, DAL
+11. MacKenzie Weegar, D, CGY
+12. Roman Josi, D, NSH
+13. Adam Fox, D, NYR
+14. Josh Morrissey, D, WPG
+15. Jakob Chychrun, D, WSH
+16. Dougie Hamilton, D, NJD
+17. Shea Theodore, D, VGK
+18. Jackson LaCombe, D, ANA
+19. Mikhail Sergachev, D, UTA
+20. Brandon Montour, D, SEA
+21. Noah Dobson, D, MTL
+22. Miro Heiskanen, D, DAL
+23. Erik Karlsson, D, PIT
+24. John Carlson, D, WSH
+25. Shayne Gostisbehere, D, CAR
+26. Neal Pionk, D, WPG
+27. Seth Jones, D, FLA
+28. Vince Dunn, D, SEA
+29. Aaron Ekblad, D, FLA
+30. Cam Fowler, D, STL
+31. Luke Hughes, D, NJD
+32. Charlie McAvoy, D, BOS
+33. Colton Parayko, D, STL
+34. Zeev Buium, D, MIN (rookie)
+35. Alexander Nikishin, D, CAR (rookie)
+36. Sam Rinzel, D, CHI (rookie)
+37. Zayne Parekh, D, CGY (rookie)
+38. Matthew Schaefer, D, NYI (rookie)
+39. Drew Doughty, D, LAK
+40. Mattias Ekholm, D, EDM
+41. Noah Hanifin, D, VGK
+42. Kris Letang, D, PIT
+43. Morgan Rielly, D, TOR
+44. Jake Walman, D, EDM
+45. Devon Toews, D, COL
+46. Thomas Chabot, D, OTT
+47. Sam Dickinson, D, SJS (rookie)
+48. Jacob Trouba, D, ANA
+49. Radko Gudas, D, ANA
+50. Lian Bichsel, D, DAL

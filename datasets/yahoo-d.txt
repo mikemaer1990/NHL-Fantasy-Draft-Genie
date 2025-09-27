@@ -1,0 +1,860 @@
+Fantasy
+Basic ADP
+Plus ADP Yahoo Fantasy Plus
+Player	Rank	Pos Rank	CER	%Drafted	Preseason	All Drafts	Last 7 Days	Preseason 💎	All Drafts 💎	Last 7 Days 💎
+Photo of Cale Makar
+Cale Makar
+COL - D
+5
+100%
+5.3
+5.3
+Photo of Quinn Hughes
+Quinn Hughes
+VAN - D
+11
+100%
+12.1
+12.1
+Photo of Evan Bouchard
+Evan Bouchard
+EDM - D
+24
+100%
+20.6
+20.6
+Photo of Zach Werenski
+Zach Werenski
+CBJ - D
+18
+100%
+21.0
+21.0
+Photo of Rasmus Dahlin
+Rasmus Dahlin
+BUF - D
+39
+100%
+26.4
+26.4
+Photo of Victor Hedman
+Victor Hedman
+TB - D
+38
+100%
+33.7
+33.7
+Photo of Josh Morrissey
+Josh Morrissey
+WPG - D
+46
+100%
+40.0
+40.0
+Photo of MacKenzie Weegar
+MacKenzie Weegar
+CGY - D
+65
+100%
+47.1
+47.1
+Photo of Adam Fox
+Adam Fox
+NYR - D
+66
+100%
+47.1
+47.1
+Photo of Roman Josi
+Roman Josi
+NSH - D
+74
+100%
+50.5
+50.5
+Photo of Lane Hutson
+Lane Hutson
+MTL - D
+53
+100%
+50.6
+50.6
+Photo of Moritz Seider
+Moritz Seider
+DET - D
+76
+100%
+54.1
+54.1
+Photo of Shea Theodore
+Shea Theodore
+VGK - D
+69
+100%
+59.9
+59.9
+Photo of Jake Sanderson
+Jake Sanderson
+OTT - D
+73
+100%
+63.2
+63.2
+Photo of Jakob Chychrun
+Jakob Chychrun
+WSH - D
+64
+100%
+67.3
+67.3
+Photo of Thomas Harley
+Thomas Harley
+DAL - D
+78
+100%
+68.7
+68.7
+Photo of Dougie Hamilton
+Dougie Hamilton
+NJ - D
+89
+100%
+73.1
+73.1
+Photo of Noah Dobson
+Noah Dobson
+MTL - D
+DTD
+87
+100%
+76.8
+76.8
+Photo of Mikhail Sergachev
+Mikhail Sergachev
+UTA - D
+97
+100%
+80.8
+80.8
+Photo of Miro Heiskanen
+Miro Heiskanen
+DAL - D
+93
+100%
+88.3
+88.3
+Photo of Seth Jones
+Seth Jones
+FLA - D
+141
+100%
+90.2
+90.2
+Photo of Brandon Montour
+Brandon Montour
+SEA - D
+O
+90
+100%
+96.3
+96.3
+Photo of Charlie McAvoy
+Charlie McAvoy
+BOS - D
+126
+100%
+101.0
+101.0
+Photo of John Carlson
+John Carlson
+WSH - D
+117
+100%
+104.3
+104.3
+Photo of Luke Hughes
+Luke Hughes
+NJ - D
+NA
+111
+100%
+109.5
+109.5
+Photo of Alexander Nikishin
+Alexander Nikishin
+CAR - D
+144
+100%
+110.5
+110.5
+Photo of Vince Dunn
+Vince Dunn
+SEA - D
+108
+100%
+114.7
+114.7
+Photo of Aaron Ekblad
+Aaron Ekblad
+FLA - D
+175
+100%
+118.7
+118.7
+Photo of Jackson LaCombe
+Jackson LaCombe
+ANA - D
+118
+100%
+122.5
+122.5
+Photo of Neal Pionk
+Neal Pionk
+WPG - D
+128
+100%
+123.5
+123.5
+Player	Rank	Pos Rank	CER	%Drafted	Preseason	All Drafts	Last 7 Days	Preseason 💎	All Drafts 💎	Last 7 Days 💎
+Photo of Erik Karlsson
+Erik Karlsson
+PIT - D
+131
+100%
+125.0
+125.0
+Photo of Drew Doughty
+Drew Doughty
+LA - D
+135
+100%
+125.5
+125.5
+Photo of Shayne Gostisbehere
+Shayne Gostisbehere
+CAR - D
+130
+100%
+127.6
+127.6
+Photo of Devon Toews
+Devon Toews
+COL - D
+138
+100%
+131.6
+131.6
+Photo of Jaccob Slavin
+Jaccob Slavin
+CAR - D
+O
+256
+6%
+132.0
+132.0
+Photo of Gustav Forsling
+Gustav Forsling
+FLA - D
+171
+100%
+135.5
+135.5
+Photo of Morgan Rielly
+Morgan Rielly
+TOR - D
+172
+100%
+136.3
+136.3
+Photo of Zayne Parekh
+Zayne Parekh
+CGY - D
+127
+94%
+142.0
+142.0
+Photo of Zeev Buium
+Zeev Buium
+MIN - D
+167
+100%
+148.8
+148.8
+Photo of Colton Parayko
+Colton Parayko
+STL - D
+158
+94%
+152.8
+152.8
+Photo of Darnell Nurse
+Darnell Nurse
+EDM - D
+225
+100%
+154.1
+154.1
+Photo of Cam Fowler
+Cam Fowler
+STL - D
+165
+90%
+155.3
+155.3
+Photo of Erik Cernak
+Erik Cernak
+TB - D
+479
+3%
+156.0
+156.0
+Photo of Brock Faber
+Brock Faber
+MIN - D
+166
+84%
+156.7
+156.7
+Photo of Lian Bichsel
+Lian Bichsel
+DAL - D
+275
+81%
+157.5
+157.5
+Photo of Jake McCabe
+Jake McCabe
+TOR - D
+477
+6%
+157.5
+157.5
+Photo of Jake Walman
+Jake Walman
+EDM - D
+161
+84%
+158.4
+158.4
+Photo of Filip Hronek
+Filip Hronek
+VAN - D
+194
+77%
+161.1
+161.1
+Photo of Brent Burns
+Brent Burns
+COL - D
+196
+32%
+162.0
+162.0
+Photo of Rasmus Andersson
+Rasmus Andersson
+CGY - D
+193
+32%
+162.1
+162.1
+Photo of Noah Hanifin
+Noah Hanifin
+VGK - D
+214
+97%
+162.4
+162.4
+Photo of Thomas Chabot
+Thomas Chabot
+OTT - D
+192
+100%
+163.5
+163.5
+Photo of Mattias Ekholm
+Mattias Ekholm
+EDM - D
+198
+84%
+164.2
+164.2
+Photo of Brandt Clarke
+Brandt Clarke
+LA - D
+522
+6%
+166.5
+166.5
+Photo of Justin Faulk
+Justin Faulk
+STL - D
+178
+35%
+167.7
+167.7
+Photo of Anthony DeAngelo
+Anthony DeAngelo
+NYI - D
+737
+19%
+168.0
+168.0
+Photo of Matthew Schaefer
+Matthew Schaefer
+NYI - D
+294
+71%
+169.2
+169.2
+Photo of Nikita Zadorov
+Nikita Zadorov
+BOS - D
+356
+48%
+172.1
+172.1
+Photo of Sam Rinzel
+Sam Rinzel
+CHI - D
+201
+52%
+173.4
+173.4
+Photo of Kris Letang
+Kris Letang
+PIT - D
+207
+48%
+173.4
+173.4
+Player	Rank	Pos Rank	CER	%Drafted	Preseason	All Drafts	Last 7 Days	Preseason 💎	All Drafts 💎	Last 7 Days 💎
+Photo of Radko Gudas
+Radko Gudas
+ANA - D
+302
+39%
+174.2
+174.2
+Photo of Bowen Byram
+Bowen Byram
+BUF - D
+491
+3%
+175.0
+175.0
+Photo of Brayden McNabb
+Brayden McNabb
+VGK - D
+274
+23%
+175.7
+175.7
+Photo of Jeremy Lauzon
+Jeremy Lauzon
+VGK - D
+O
+293
+42%
+177.8
+177.8
+Photo of Owen Power
+Owen Power
+BUF - D
+243
+16%
+178.6
+178.6
+Photo of Oliver Ekman-Larsson
+Oliver Ekman-Larsson
+TOR - D
+442
+3%
+179.0
+179.0
+Photo of Dylan DeMelo
+Dylan DeMelo
+WPG - D
+450
+3%
+181.0
+181.0
+Photo of Mason Lohrei
+Mason Lohrei
+BOS - D
+255
+3%
+182.0
+182.0
+Photo of John Klingberg
+John Klingberg
+SJ - D
+O
+907
+3%
+182.0
+182.0
+Photo of Mike Matheson
+Mike Matheson
+MTL - D
+217
+19%
+182.3
+182.3
+Photo of Alexander Romanov
+Alexander Romanov
+NYI - D
+270
+16%
+183.6
+183.6
+Photo of Luke Schenn
+Luke Schenn
+WPG - D
+532
+6%
+184.5
+184.5
+Photo of Connor Clifton
+Connor Clifton
+PIT - D
+572
+3%
+186.0
+186.0
+Photo of Philip Broberg
+Philip Broberg
+STL - D
+575
+6%
+187.0
+187.0
+Photo of Sam Dickinson
+Sam Dickinson
+SJ - D
+226
+16%
+189.0
+189.0
+Photo of Sean Durzi
+Sean Durzi
+UTA - D
+229
+13%
+189.8
+189.8
+Photo of Alec Regula
+Alec Regula
+EDM - D
+1176
+3%
+191.0
+191.0
+Photo of K'Andre Miller
+K'Andre Miller
+CAR - D
+O
+233
+10%
+191.3
+191.3
+Photo of Dmitry Orlov
+Dmitry Orlov
+SJ - D
+246
+-
+-
+-
+Photo of Jacob Trouba
+Jacob Trouba
+ANA - D
+250
+-
+-
+-
+Photo of Ben Chiarot
+Ben Chiarot
+DET - D
+266
+-
+-
+-
+Photo of Hampus Lindholm
+Hampus Lindholm
+BOS - D
+269
+-
+-
+-
+Photo of Damon Severson
+Damon Severson
+CBJ - D
+271
+-
+-
+-
+Photo of Brady Skjei
+Brady Skjei
+NSH - D
+276
+-
+-
+-
+Photo of Travis Sanheim
+Travis Sanheim
+PHI - D
+282
+-
+-
+-
+Photo of Ivan Provorov
+Ivan Provorov
+CBJ - D
+287
+-
+-
+-
+Photo of Alex Pietrangelo
+Alex Pietrangelo
+VGK - D
+IR-LT
+288
+-
+-
+-
+Photo of Kaiden Guhle
+Kaiden Guhle
+MTL - D
+DTD
+290
+-
+-
+-
+Photo of Adam Larsson
+Adam Larsson
+SEA - D
+458
+-
+-
+-
+Photo of Ryan McDonagh
+Ryan McDonagh
+TB - D
+466
+-
+-
+-
+Player	Rank	Pos Rank	CER	%Drafted	Preseason	All Drafts	Last 7 Days	Preseason 💎	All Drafts 💎	Last 7 Days 💎
+Photo of Esa Lindell
+Esa Lindell
+DAL - D
+469
+-
+-
+-
+Photo of Niko Mikkola
+Niko Mikkola
+FLA - D
+470
+-
+-
+-
+Photo of Darren Raddysh
+Darren Raddysh
+TB - D
+473
+-
+-
+-
+Photo of Michael Kesselring
+Michael Kesselring
+BUF - D
+474
+-
+-
+-
+Photo of Vladislav Gavrikov
+Vladislav Gavrikov
+NYR - D
+481
+-
+-
+-
+Photo of Matt Roy
+Matt Roy
+WSH - D
+482
+-
+-
+-
+Photo of Jordan Spence
+Jordan Spence
+OTT - D
+485
+-
+-
+-
+Photo of Mikey Anderson
+Mikey Anderson
+LA - D
+496
+-
+-
+-
+Photo of Dylan Samberg
+Dylan Samberg
+WPG - D
+502
+-
+-
+-
+Photo of Martin Fehervary
+Martin Fehervary
+WSH - D
+509
+-
+-
+-
+Photo of Braden Schneider
+Braden Schneider
+NYR - D
+513
+-
+-
+-
+Photo of Jalen Chatfield
+Jalen Chatfield
+CAR - D
+O
+524
+-
+-
+-
+Photo of Rasmus Sandin
+Rasmus Sandin
+WSH - D
+525
+-
+-
+-
+Photo of Matt Grzelcyk
+Matt Grzelcyk
+CHI - D
+528
+-
+-
+-
+Photo of Brenden Dillon
+Brenden Dillon
+NJ - D
+529
+-
+-
+-
+Photo of Jared Spurgeon
+Jared Spurgeon
+MIN - D
+536
+-
+-
+-
+Photo of Joel Edmundson
+Joel Edmundson
+LA - D
+540
+-
+-
+-
+Photo of Dante Fabbro
+Dante Fabbro
+CBJ - D
+549
+-
+-
+-
+Photo of Marcus Pettersson
+Marcus Pettersson
+VAN - D
+551
+-
+-
+-
+Photo of Jake Middleton
+Jake Middleton
+MIN - D
+552
+-
+-
+-
+Photo of Sean Walker
+Sean Walker
+CAR - D
+555
+-
+-
+-
+Photo of Nick Seeler
+Nick Seeler
+PHI - D
+556
+-
+-
+-
+Photo of Ryan Pulock
+Ryan Pulock
+NYI - D
+561
+-
+-
+-
+Photo of Simon Benoit
+Simon Benoit
+TOR - D
+DTD
+565
+-
+-
+-
+Photo of Tyler Myers
+Tyler Myers
+VAN - D
+567
+-
+-
+-
+Photo of Cody Ceci
+Cody Ceci
+LA - D
+577
+-
+-
+-
+Photo of Simon Edvinsson
+Simon Edvinsson
+DET - D
+O
+582
+-
+-
+-
+Photo of Dmitry Kulikov
+Dmitry Kulikov
+FLA - D
+585
+-
+-
+-
+Photo of Samuel Girard
+Samuel Girard
+COL - D
+O
+591
+-
+-
+-
+Photo of Adam Pelech
+Adam Pelech
+NYI - D
+596
+-
+-
+-

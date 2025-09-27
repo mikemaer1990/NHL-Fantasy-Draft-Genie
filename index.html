@@ -48,22 +48,6 @@
             font-weight: 700;
         }
 
-        .dataset-selector {
-            padding: 12px 16px;
-            border: 2px solid #e9ecef;
-            border-radius: 8px;
-            font-size: 1rem;
-            background: white;
-            color: #495057;
-            cursor: pointer;
-            transition: border-color 0.3s ease;
-        }
-
-        .dataset-selector:focus {
-            outline: none;
-            border-color: #2a5298;
-            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
-        }
 
         .reset-btn {
             background: #dc3545;
@@ -337,79 +321,7 @@
             margin-bottom: 8px;
         }
 
-        /* Pulsing animation for dropdown when no dataset selected */
-        .dataset-selector.needs-attention {
-            animation: pulse-glow 2s infinite;
-            border-color: #ffc107 !important;
-            box-shadow: 0 0 10px rgba(255, 193, 7, 0.3) !important;
-        }
 
-        @keyframes pulse-glow {
-            0% {
-                box-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
-            }
-            50% {
-                box-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
-            }
-            100% {
-                box-shadow: 0 0 5px rgba(255, 193, 7, 0.3);
-            }
-        }
-
-        /* Arrow pointing to dropdown */
-        .dropdown-pointer {
-            position: fixed;
-            background: #ffc107;
-            color: #333;
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
-            animation: bounce-pointer 1.5s infinite;
-            z-index: 1000;
-            /* Position will be set dynamically by JavaScript */
-        }
-
-        .dropdown-pointer::after {
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-bottom: 8px solid #ffc107;
-        }
-
-        @keyframes bounce-pointer {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        .dropdown-pointer.hidden {
-            display: none;
-        }
-
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-        }
 
         /* Tab styling */
         .tab-nav {
@@ -475,12 +387,113 @@
             max-width: 600px;
         }
 
+        /* Scarcity badge styling */
+        .scarcity-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 8px;
+        }
+
+        .badge-elite-g { background: #dc3545; color: white; }
+        .badge-rare-d { background: #fd7e14; color: white; }
+        .badge-top-lw { background: #20c997; color: white; }
+        .badge-elite-rw { background: #6f42c1; color: white; }
+        .badge-elite-c { background: #0d6efd; color: white; }
+
+        /* Urgency indicator styling */
+        .urgency-indicator {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 14px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-left: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        .urgency-critical {
+            background: #dc3545;
+            color: white;
+            animation: urgent-pulse 1s infinite;
+        }
+        .urgency-high {
+            background: #fd7e14;
+            color: white;
+        }
+        .urgency-medium {
+            background: #ffc107;
+            color: #000;
+        }
+
+        @keyframes urgent-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .value-score {
+            font-size: 0.8rem;
+            color: #495057;
+            font-weight: 600;
+        }
+
+        /* Recommendations panel styling */
+        .recommendations-panel {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f8f9fa 100%);
+            border: 2px solid #28a745;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .recommendations-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .recommendations-header h4 {
+            color: #155724;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .recommendation-item {
+            background: white;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .recommendation-text {
+            color: #155724;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .recommendation-priority {
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .priority-high { background: #dc3545; color: white; }
+        .priority-medium { background: #fd7e14; color: white; }
+        .priority-low { background: #6c757d; color: white; }
+
         /* Responsive styling for mobile */
         @media (max-width: 768px) {
-            .dropdown-pointer {
-                font-size: 0.8rem;
-                padding: 6px 10px;
-            }
 
             .tab-nav {
                 padding: 2px;
@@ -500,15 +513,7 @@
         <header class="header">
             <h1>🏒 NHL Draft Assistant</h1>
             <div class="header-controls">
-                <select class="dataset-selector needs-attention" id="datasetSelector" onchange="switchDataset()">
-                    <option value="" disabled selected>Choose preferred dataset</option>
-                    <option value="player_data2.json">ESPN Rankings (175 players)</option>
-                    <option value="player_data.json">Consensus Rankings (250 players)</option>
-                </select>
                 <button class="reset-btn" onclick="resetDraft()">Reset Draft</button>
-            </div>
-            <div class="dropdown-pointer" id="dropdownPointer">
-                Start here! 👆
             </div>
         </header>
 
@@ -523,22 +528,11 @@
                 <div class="section">
                     <h3>🏆 Available Players</h3>
 
-                    <!-- Welcome message for when no dataset selected -->
-                    <div id="welcomeContainer">
-                        <div class="welcome-message">
-                            <h4>Welcome to NHL Fantasy Draft Genie! 🏒</h4>
-                            <p>Select a dataset from the dropdown menu in the top right to start your draft:</p>
-                            <ul>
-                                <li><strong>ESPN Rankings</strong> - Official ESPN fantasy rankings (175 players)</li>
-                                <li><strong>Consensus Rankings</strong> - Multi-source consensus data (250 players)</li>
-                            </ul>
-                            <p>Then use the search bar and draft tools to build your perfect fantasy team!</p>
-                        </div>
-                    </div>
 
                     <!-- Tab navigation -->
                     <div class="tab-nav" id="tabNav" style="display: none;">
                         <button class="tab-btn active" data-tab="overall">Overall</button>
+                        <button class="tab-btn" data-tab="smart">Smart</button>
                         <button class="tab-btn" data-tab="C">C</button>
                         <button class="tab-btn" data-tab="LW">LW</button>
                         <button class="tab-btn" data-tab="RW">RW</button>
@@ -549,6 +543,7 @@
                     <!-- Tab content -->
                     <div class="tab-content" id="tabContent" style="display: none;">
                         <div class="tab-pane active" id="tab-overall"></div>
+                        <div class="tab-pane" id="tab-smart"></div>
                         <div class="tab-pane" id="tab-C"></div>
                         <div class="tab-pane" id="tab-LW"></div>
                         <div class="tab-pane" id="tab-RW"></div>
@@ -560,6 +555,16 @@
 
             <div class="panel">
                 <h2>My Team</h2>
+
+                <!-- Draft Recommendations -->
+                <div id="recommendationsContainer" style="display: none;">
+                    <div class="recommendations-panel">
+                        <div class="recommendations-header">
+                            <h4>🎯 Draft Recommendations</h4>
+                        </div>
+                        <div id="recommendationsList"></div>
+                    </div>
+                </div>
 
                 <div class="position-groups">
                     <div class="position-group">
@@ -645,7 +650,7 @@
         let allPlayers = [];
         let availablePlayers = [];
         let myTeam = [];
-        let currentDataset = null;
+        let currentDataset = 'consensus_player_data.json';
         let roster = {
             C: [null, null, null],
             LW: [null, null, null],
@@ -655,7 +660,7 @@
             BENCH: [null]
         };
 
-        async function loadPlayerData(filename = currentDataset) {
+        async function loadPlayerData(filename = 'consensus_player_data.json') {
             try {
                 const response = await fetch(filename);
                 const data = await response.json();
@@ -667,53 +672,43 @@
                 document.getElementById('topOverall').innerHTML = `
                     <div class="welcome-message">
                         <h4>Unable to load player data 📊</h4>
-                        <p>Please try selecting a different dataset from the dropdown menu above, or refresh the page.</p>
+                        <p>Please refresh the page to try again.</p>
                         <p>Make sure you're accessing the site through a web server (not opening the file directly).</p>
                     </div>
                 `;
             }
         }
 
-        function switchDataset() {
-            const selector = document.getElementById('datasetSelector');
-            const selectedValue = selector.value;
 
-            // Don't proceed if no valid dataset selected
-            if (!selectedValue || selectedValue === '') {
-                return;
-            }
-
-            currentDataset = selectedValue;
-
-            // Remove attention-getting animations once user selects dataset
-            selector.classList.remove('needs-attention');
-            const pointer = document.getElementById('dropdownPointer');
-            if (pointer) {
-                pointer.classList.add('hidden');
-            }
-
-            // Reset the draft when switching datasets
-            resetDraft();
-
-            // Load new dataset
-            loadPlayerData(currentDataset);
-        }
-
-        function createPlayerCard(player) {
+        function createPlayerCard(player, showValueScore = false) {
             const positions = player.dualEligible ?
                 player.espnPosition.split(',').map(p => p.trim()).join('/') :
                 player.position;
+
+            const scarcityBadge = getScarcityBadge(player);
+            const urgencyIndicator = getUrgencyIndicator(player);
+            const valueScore = calculateValueScore(player);
+
+            const badgeHtml = scarcityBadge ?
+                `<span class="scarcity-badge ${scarcityBadge.class}">${scarcityBadge.text}</span>` : '';
+
+            const urgencyHtml = urgencyIndicator ?
+                `<span class="urgency-indicator ${urgencyIndicator.class}">${urgencyIndicator.text}</span>` : '';
+
+            const valueScoreHtml = showValueScore ?
+                `<div class="value-score">Value: ${valueScore}</div>` : '';
 
             return `
                 <div class="player-card">
                     <div class="player-info">
                         <div class="player-details">
-                            <h4>${player.name}</h4>
+                            <h4>${player.name}${badgeHtml}${urgencyHtml}</h4>
                             <div class="player-meta">${positions} - ${player.team}</div>
                         </div>
                         <div class="player-ranks">
                             <div>Overall: #${player.overallRank}</div>
                             <div>Position: #${player.positionRank}</div>
+                            ${valueScoreHtml}
                         </div>
                     </div>
                     <div class="player-actions">
@@ -725,6 +720,213 @@
         }
 
         let currentTab = 'overall';
+
+        // Position scarcity scoring system
+        const positionScarcity = {
+            G: 5.0,    // Goalies - Hardest to find elite players
+            D: 4.0,    // Defense - Very limited elite producers
+            LW: 3.0,   // Left Wing - Fewer top options than C/RW
+            RW: 2.0,   // Right Wing - Decent depth but limited elite
+            C: 1.0     // Centers - Most available fantasy options
+        };
+
+        function calculateValueScore(player) {
+            const baseValue = 1000 - player.overallRank; // Higher rank = higher base value
+
+            // Add massive bonus for top overall picks to ensure they always rank highest
+            let overallBonus = 0;
+            if (player.overallRank === 1) {
+                overallBonus = 2000; // Guarantee #1 overall is on top
+            } else if (player.overallRank <= 3) {
+                overallBonus = 1500; // Huge bonus for top 3
+            } else if (player.overallRank <= 5) {
+                overallBonus = 1200; // Massive bonus for top 5
+            } else if (player.overallRank <= 10) {
+                overallBonus = 800; // Big bonus for top 10
+            } else if (player.overallRank <= 20) {
+                overallBonus = 400; // Good bonus for top 20
+            }
+
+            // Only apply scarcity bonus to elite players, but cap it much lower
+            const isElite = isPlayerElite(player);
+            let scarcityBonus = 0;
+            if (isElite) {
+                const scarcityMultiplier = positionScarcity[player.position] || 1.0;
+                // Cap scarcity bonus very low to prevent overwhelming overall rank
+                scarcityBonus = Math.min(baseValue * (scarcityMultiplier - 1.0), 200);
+            }
+
+            const valueScore = baseValue + overallBonus + scarcityBonus;
+            return Math.round(valueScore);
+        }
+
+        function isPlayerElite(player) {
+            const position = player.position;
+            const rank = player.positionRank;
+
+            // Define elite thresholds for each position
+            if (position === 'G') return rank <= 8;
+            if (position === 'D') return rank <= 12;
+            if (position === 'LW') return rank <= 10;
+            if (position === 'RW') return rank <= 8;
+            if (position === 'C') return rank <= 12;
+            return false;
+        }
+
+        function getRemainingElitePlayers(position) {
+            return availablePlayers.filter(player => {
+                if (player.dualEligible) {
+                    if (!player.espnPosition.includes(position)) return false;
+                } else if (player.position !== position) {
+                    return false;
+                }
+
+                // Define what counts as "elite" for each position
+                if (position === 'G') return player.positionRank <= 8;
+                if (position === 'D') return player.positionRank <= 12;
+                if (position === 'LW') return player.positionRank <= 10;
+                if (position === 'RW') return player.positionRank <= 8;
+                if (position === 'C') return player.positionRank <= 5;
+                return false;
+            }).length;
+        }
+
+        function isPositionFilled(position) {
+            if (position === 'G') {
+                return roster.G.filter(slot => slot !== null).length >= 2;
+            }
+            if (position === 'D') {
+                return roster.D.filter(slot => slot !== null).length >= 5;
+            }
+            if (position === 'C') {
+                return roster.C.filter(slot => slot !== null).length >= 3;
+            }
+            if (position === 'LW') {
+                return roster.LW.filter(slot => slot !== null).length >= 3;
+            }
+            if (position === 'RW') {
+                return roster.RW.filter(slot => slot !== null).length >= 3;
+            }
+            return false;
+        }
+
+        function getUrgencyIndicator(player) {
+            const position = player.position;
+
+            // Don't show urgency if position is already filled
+            if (isPositionFilled(position)) return null;
+
+            const remaining = getRemainingElitePlayers(position);
+            const rank = player.positionRank;
+
+            // Only show urgency for elite players
+            let isElite = false;
+            if (position === 'G' && rank <= 8) isElite = true;
+            if (position === 'D' && rank <= 12) isElite = true;
+            if (position === 'LW' && rank <= 10) isElite = true;
+            if (position === 'RW' && rank <= 8) isElite = true;
+            if (position === 'C' && rank <= 5) isElite = true;
+
+            if (!isElite) return null;
+
+            if (remaining <= 2) return { text: 'GRAB NOW!', class: 'urgency-critical' };
+            if (remaining <= 4) return { text: 'Grab Soon!', class: 'urgency-high' };
+            if (remaining <= 6) return { text: 'Consider', class: 'urgency-medium' };
+
+            return null;
+        }
+
+        function getScarcityBadge(player) {
+            const position = player.position;
+            const rank = player.positionRank;
+
+            // Don't show scarcity badges for filled positions
+            if (isPositionFilled(position)) return null;
+
+            if (position === 'G' && rank <= 8) return { text: 'Elite G!', class: 'badge-elite-g' };
+            if (position === 'D' && rank <= 12) return { text: 'Rare D!', class: 'badge-rare-d' };
+            if (position === 'LW' && rank <= 10) return { text: 'Top LW!', class: 'badge-top-lw' };
+            if (position === 'RW' && rank <= 8) return { text: 'Elite RW!', class: 'badge-elite-rw' };
+            if (position === 'C' && rank <= 5) return { text: 'Elite C!', class: 'badge-elite-c' };
+
+            return null;
+        }
+
+        function generateDraftRecommendations() {
+            if (availablePlayers.length === 0 || myTeam.length === 0) return [];
+
+            const recommendations = [];
+            const positions = ['G', 'D', 'LW', 'RW', 'C'];
+
+            // Calculate needs for each position
+            for (const position of positions) {
+                const filled = roster[position].filter(slot => slot !== null).length;
+                const required = roster[position].length;
+                const remaining = required - filled;
+
+                if (remaining > 0) {
+                    const eliteLeft = getRemainingElitePlayers(position);
+                    const bestAvailable = availablePlayers
+                        .filter(player => {
+                            if (player.dualEligible) {
+                                return player.espnPosition.includes(position);
+                            }
+                            return player.position === position;
+                        })
+                        .sort((a, b) => a.positionRank - b.positionRank)[0];
+
+                    if (bestAvailable) {
+                        let priority = 'low';
+                        let message = '';
+
+                        if (eliteLeft <= 2 && bestAvailable.positionRank <= getEliteThreshold(position)) {
+                            priority = 'high';
+                            message = `URGENT: Only ${eliteLeft} elite ${position}s left! Consider ${bestAvailable.name}`;
+                        } else if (eliteLeft <= 4 && bestAvailable.positionRank <= getEliteThreshold(position)) {
+                            priority = 'medium';
+                            message = `${eliteLeft} quality ${position}s remain. ${bestAvailable.name} is available`;
+                        } else if (remaining >= 2) {
+                            priority = 'low';
+                            message = `Need ${remaining} more ${position}s. Best: ${bestAvailable.name} (#${bestAvailable.positionRank})`;
+                        }
+
+                        if (message) {
+                            recommendations.push({ message, priority, position });
+                        }
+                    }
+                }
+            }
+
+            // Sort by priority (high -> medium -> low)
+            return recommendations.sort((a, b) => {
+                const priorityOrder = { high: 0, medium: 1, low: 2 };
+                return priorityOrder[a.priority] - priorityOrder[b.priority];
+            });
+        }
+
+        function getEliteThreshold(position) {
+            const thresholds = { G: 8, D: 12, LW: 10, RW: 8, C: 5 };
+            return thresholds[position] || 10;
+        }
+
+        function updateRecommendations() {
+            const recommendations = generateDraftRecommendations();
+            const container = document.getElementById('recommendationsContainer');
+            const list = document.getElementById('recommendationsList');
+
+            if (recommendations.length === 0 || myTeam.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+
+            container.style.display = 'block';
+            list.innerHTML = recommendations.map(rec => `
+                <div class="recommendation-item">
+                    <div class="recommendation-text">${rec.message}</div>
+                    <div class="recommendation-priority priority-${rec.priority}">${rec.priority}</div>
+                </div>
+            `).join('');
+        }
 
         function switchTab(tabName) {
             // Update tab buttons
@@ -748,6 +950,8 @@
 
             if (currentTab === 'overall') {
                 updateTopOverall();
+            } else if (currentTab === 'smart') {
+                updateSmartTab();
             } else {
                 updatePositionTab(currentTab);
             }
@@ -765,6 +969,72 @@
             }
 
             container.innerHTML = topPlayers.map(createPlayerCard).join('');
+        }
+
+        function updateSmartTab() {
+            // Get balanced recommendations across all positions
+            const balancedRecommendations = getBalancedSmartRecommendations();
+
+            const container = document.getElementById('tab-smart');
+            if (balancedRecommendations.length === 0) {
+                container.innerHTML = '<div class="empty-state">No players available</div>';
+                return;
+            }
+
+            let html = '<div style="margin-bottom: 15px; color: #495057; font-style: italic; text-align: center;">🧠 Smart recommendations based on position scarcity and value</div>';
+            html += balancedRecommendations.map(player => createPlayerCard(player, true)).join('');
+
+            container.innerHTML = html;
+        }
+
+        function getBalancedSmartRecommendations() {
+            const positions = ['G', 'D', 'LW', 'RW', 'C'];
+            const maxPerPosition = 3;
+            const recommendations = [];
+
+            // First, always include any consensus top picks available (top 15 overall)
+            // Don't filter by position filled - let them compete on value
+            const topPicks = availablePlayers
+                .filter(player => player.overallRank <= 15)
+                .map(player => ({
+                    ...player,
+                    valueScore: calculateValueScore(player),
+                    isTopPick: true
+                }))
+                .sort((a, b) => b.valueScore - a.valueScore); // Sort by value score, not overall rank
+
+            recommendations.push(...topPicks.slice(0, 5)); // Take top 5 by value
+
+            // Then get top players for each position that isn't filled (excluding already added top picks)
+            for (const position of positions) {
+                if (isPositionFilled(position)) continue;
+
+                const positionPlayers = availablePlayers
+                    .filter(player => {
+                        // Skip if already added as top pick
+                        if (topPicks.slice(0, 5).some(tp => tp.id === player.id)) return false;
+
+                        if (player.dualEligible) {
+                            return player.espnPosition.includes(position);
+                        }
+                        return player.position === position;
+                    })
+                    .map(player => ({
+                        ...player,
+                        valueScore: calculateValueScore(player)
+                    }))
+                    .sort((a, b) => b.valueScore - a.valueScore)
+                    .slice(0, maxPerPosition);
+
+                recommendations.push(...positionPlayers);
+            }
+
+            // Sort all recommendations by value score and take top 15
+            const final = recommendations
+                .sort((a, b) => b.valueScore - a.valueScore)
+                .slice(0, 15);
+
+            return final;
         }
 
         function updatePositionTab(position) {
@@ -796,6 +1066,7 @@
                 availablePlayers = availablePlayers.filter(p => p.id !== playerId);
                 myTeam.push({...player, assignedPosition});
                 updateDisplays();
+                updateRecommendations();
             }
         }
 
@@ -840,6 +1111,7 @@
         function removePlayer(playerId) {
             availablePlayers = availablePlayers.filter(p => p.id !== playerId);
             updateDisplays();
+            updateRecommendations();
         }
 
         function filterPlayers() {
@@ -859,13 +1131,11 @@
 
         function updateDisplays() {
             if (availablePlayers.length === 0) {
-                // Show welcome message when no data loaded
-                document.getElementById('welcomeContainer').style.display = 'block';
+                // Hide tabs when no data loaded
                 document.getElementById('tabNav').style.display = 'none';
                 document.getElementById('tabContent').style.display = 'none';
             } else {
                 // Show tabs when data is loaded
-                document.getElementById('welcomeContainer').style.display = 'none';
                 document.getElementById('tabNav').style.display = 'flex';
                 document.getElementById('tabContent').style.display = 'block';
                 updateTabContent();
@@ -895,35 +1165,13 @@
 
             document.getElementById('searchInput').value = '';
             updateDisplays();
+            updateRecommendations();
         }
 
-        function positionDropdownPointer() {
-            const selector = document.getElementById('datasetSelector');
-            const pointer = document.getElementById('dropdownPointer');
-
-            if (!selector || !pointer || pointer.classList.contains('hidden')) {
-                return;
-            }
-
-            // Get the dropdown's position and dimensions
-            const selectorRect = selector.getBoundingClientRect();
-
-            // Calculate pointer position: centered below the dropdown
-            const pointerLeft = selectorRect.left + (selectorRect.width / 2);
-            const pointerTop = selectorRect.bottom + 10; // 10px below the dropdown
-
-            // Apply the calculated position
-            pointer.style.left = `${pointerLeft}px`;
-            pointer.style.top = `${pointerTop}px`;
-            pointer.style.transform = 'translateX(-50%)'; // Center the pointer horizontally
-        }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Don't auto-load data on startup, let user choose dataset first
-            // The welcome message is already in the HTML
-
-            // Position the pointer correctly
-            positionDropdownPointer();
+            // Auto-load consensus data on startup
+            loadPlayerData();
 
             // Add tab click event listeners
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -932,19 +1180,7 @@
                     switchTab(tabName);
                 });
             });
-
-            // Hide pointer after 10 seconds if user hasn't interacted
-            setTimeout(() => {
-                const pointer = document.getElementById('dropdownPointer');
-                if (pointer && !pointer.classList.contains('hidden')) {
-                    pointer.style.animation = 'fadeOut 0.5s ease-out forwards';
-                    setTimeout(() => pointer.classList.add('hidden'), 500);
-                }
-            }, 10000);
         });
-
-        // Reposition pointer when window is resized
-        window.addEventListener('resize', positionDropdownPointer);
     </script>
 </body>
 </html>

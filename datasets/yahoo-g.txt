@@ -1,0 +1,656 @@
+Player	Rank	Pos Rank	CER	%Drafted	Preseason	All Drafts	Last 7 Days	Preseason 💎	All Drafts 💎	Last 7 Days 💎
+Photo of Connor Hellebuyck
+Connor Hellebuyck
+WPG - G
+8
+100%
+9.5
+9.5
+Photo of Andrei Vasilevskiy
+Andrei Vasilevskiy
+TB - G
+O
+16
+100%
+16.1
+16.1
+Photo of Jake Oettinger
+Jake Oettinger
+DAL - G
+17
+100%
+17.8
+17.8
+Photo of Mackenzie Blackwood
+Mackenzie Blackwood
+COL - G
+O
+21
+100%
+27.8
+27.8
+Photo of Igor Shesterkin
+Igor Shesterkin
+NYR - G
+34
+100%
+30.0
+30.0
+Photo of Sergei Bobrovsky
+Sergei Bobrovsky
+FLA - G
+58
+100%
+43.8
+43.8
+Photo of Darcy Kuemper
+Darcy Kuemper
+LA - G
+75
+100%
+52.5
+52.5
+Photo of Filip Gustavsson
+Filip Gustavsson
+MIN - G
+41
+100%
+52.8
+52.8
+Photo of Ilya Sorokin
+Ilya Sorokin
+NYI - G
+51
+100%
+58.5
+58.5
+Photo of Adin Hill
+Adin Hill
+VGK - G
+70
+100%
+59.0
+59.0
+Photo of Dustin Wolf
+Dustin Wolf
+CGY - G
+63
+100%
+63.5
+63.5
+Photo of Anthony Stolarz
+Anthony Stolarz
+TOR - G
+106
+100%
+65.5
+65.5
+Photo of Logan Thompson
+Logan Thompson
+WSH - G
+79
+100%
+73.2
+73.2
+Photo of Jacob Markstrom
+Jacob Markstrom
+NJ - G
+101
+100%
+77.8
+77.8
+Photo of Linus Ullmark
+Linus Ullmark
+OTT - G
+102
+100%
+82.3
+82.3
+Photo of Thatcher Demko
+Thatcher Demko
+VAN - G
+168
+100%
+96.5
+96.5
+Photo of Jordan Binnington
+Jordan Binnington
+STL - G
+116
+100%
+99.1
+99.1
+Photo of Juuse Saros
+Juuse Saros
+NSH - G
+125
+100%
+100.6
+100.6
+Photo of Pyotr Kochetkov
+Pyotr Kochetkov
+CAR - G
+O
+147
+100%
+107.0
+107.0
+Photo of Sam Montembeault
+Sam Montembeault
+MTL - G
+132
+100%
+110.2
+110.2
+Photo of Jeremy Swayman
+Jeremy Swayman
+BOS - G
+143
+100%
+113.9
+113.9
+Photo of Stuart Skinner
+Stuart Skinner
+EDM - G
+251
+87%
+132.3
+132.3
+Photo of Joey Daccord
+Joey Daccord
+SEA - G
+159
+97%
+133.7
+133.7
+Photo of Lukas Dostal
+Lukas Dostal
+ANA - G
+169
+97%
+136.2
+136.2
+Photo of Karel Vejmelka
+Karel Vejmelka
+UTA - G
+190
+100%
+137.6
+137.6
+Photo of Joseph Woll
+Joseph Woll
+TOR - G
+O
+219
+97%
+146.5
+146.5
+Photo of Frederik Andersen
+Frederik Andersen
+CAR - G
+232
+97%
+156.9
+156.9
+Photo of Leevi Merilainen
+Leevi Merilainen
+OTT - G
+312
+6%
+161.0
+161.0
+Photo of Jet Greaves
+Jet Greaves
+CBJ - G
+220
+94%
+164.0
+164.0
+Photo of Calvin Pickard
+Calvin Pickard
+EDM - G
+257
+35%
+164.4
+164.4
+Player	Rank	Pos Rank	CER	%Drafted	Preseason	All Drafts	Last 7 Days	Preseason 💎	All Drafts 💎	Last 7 Days 💎
+Photo of John Gibson
+John Gibson
+DET - G
+253
+68%
+167.6
+167.6
+Photo of Spencer Knight
+Spencer Knight
+CHI - G
+331
+29%
+168.0
+168.0
+Photo of Casey DeSmith
+Casey DeSmith
+DAL - G
+317
+6%
+168.5
+168.5
+Photo of Kevin Lankinen
+Kevin Lankinen
+VAN - G
+310
+13%
+171.0
+171.0
+Photo of Yaroslav Askarov
+Yaroslav Askarov
+SJ - G
+240
+23%
+171.7
+171.7
+Photo of Tristan Jarry
+Tristan Jarry
+PIT - G
+239
+3%
+174.0
+174.0
+Photo of Samuel Ersson
+Samuel Ersson
+PHI - G
+494
+13%
+174.3
+174.3
+Photo of Ukko-Pekka Luukkonen
+Ukko-Pekka Luukkonen
+BUF - G
+O
+234
+42%
+177.8
+177.8
+Photo of Scott Wedgewood
+Scott Wedgewood
+COL - G
+315
+29%
+182.0
+182.0
+Photo of Jonas Johansson
+Jonas Johansson
+TB - G
+452
+6%
+182.0
+182.0
+Photo of Daniel Vladar
+Daniel Vladar
+PHI - G
+292
+3%
+183.0
+183.0
+Photo of Akira Schmid
+Akira Schmid
+VGK - G
+342
+3%
+183.0
+183.0
+Photo of Alexandar Georgiev
+Alexandar Georgiev
+BUF - G
+826
+3%
+183.0
+183.0
+Photo of Charlie Lindgren
+Charlie Lindgren
+WSH - G
+281
+10%
+183.7
+183.7
+Photo of Daniil Tarasov
+Daniil Tarasov
+FLA - G
+518
+3%
+186.0
+186.0
+Photo of Vitek Vanecek
+Vitek Vanecek
+UTA - G
+589
+3%
+186.0
+186.0
+Photo of Cameron Talbot
+Cameron Talbot
+DET - G
+328
+6%
+187.5
+187.5
+Photo of Joel Hofer
+Joel Hofer
+STL - G
+326
+3%
+192.0
+192.0
+Photo of Anton Forsberg
+Anton Forsberg
+LA - G
+330
+3%
+192.0
+192.0
+Photo of Ilya Samsonov
+Ilya Samsonov
+VGK - G
+NA
+284
+-
+-
+-
+Photo of Jake Allen
+Jake Allen
+NJ - G
+325
+-
+-
+-
+Photo of Eric Comrie
+Eric Comrie
+WPG - G
+327
+-
+-
+-
+Photo of Laurent Brossoit
+Laurent Brossoit
+CHI - G
+IR-NR
+332
+-
+-
+-
+Photo of Nico Daws
+Nico Daws
+NJ - G
+334
+-
+-
+-
+Photo of Jonathan Quick
+Jonathan Quick
+NYR - G
+335
+-
+-
+-
+Photo of Dustin Tokarski
+Dustin Tokarski
+CAR - G
+NA
+338
+-
+-
+-
+Photo of Jakub Dobes
+Jakub Dobes
+MTL - G
+339
+-
+-
+-
+Photo of Alex Lyon
+Alex Lyon
+BUF - G
+343
+-
+-
+-
+Photo of Semyon Varlamov
+Semyon Varlamov
+NYI - G
+IR-LT
+348
+-
+-
+-
+Photo of Erik Portillo
+Erik Portillo
+LA - G
+350
+-
+-
+-
+Player	Rank	Pos Rank	CER	%Drafted	Preseason	All Drafts	Last 7 Days	Preseason 💎	All Drafts 💎	Last 7 Days 💎
+Photo of David Rittich
+David Rittich
+NYI - G
+351
+-
+-
+-
+Photo of Matt Murray
+Matt Murray
+NSH - G
+354
+-
+-
+-
+Photo of Louis Domingue
+Louis Domingue
+NYR - G
+NA
+355
+-
+-
+-
+Photo of Victor Ostman
+Victor Ostman
+SEA - G
+359
+-
+-
+-
+Photo of Jaxson Stauber
+Jaxson Stauber
+UTA - G
+361
+-
+-
+-
+Photo of Nikita Tolopilo
+Nikita Tolopilo
+VAN - G
+362
+-
+-
+-
+Photo of Magnus Hellberg
+Magnus Hellberg
+DAL - G
+NA
+364
+-
+-
+-
+Photo of Chris Driedger
+Chris Driedger
+FLA - G
+NA
+365
+-
+-
+-
+Photo of Sebastian Cossa
+Sebastian Cossa
+DET - G
+366
+-
+-
+-
+Photo of Kevin Mandolese
+Kevin Mandolese
+MTL - G
+367
+-
+-
+-
+Photo of Ilya Nabokov
+Ilya Nabokov
+COL - G
+NA
+368
+-
+-
+-
+Photo of Isaac Poulter
+Isaac Poulter
+WPG - G
+369
+-
+-
+-
+Photo of Semyon Frolov
+Semyon Frolov
+CAR - G
+NA
+370
+-
+-
+-
+Photo of Arvid Holm
+Arvid Holm
+COL - G
+NA
+371
+-
+-
+-
+Photo of Jacob Fowler
+Jacob Fowler
+MTL - G
+372
+-
+-
+-
+Photo of Joshua Ravensbergen
+Joshua Ravensbergen
+SJ - G
+NA
+373
+-
+-
+-
+Photo of Gabriel D'Aigle
+Gabriel D'Aigle
+PIT - G
+NA
+374
+-
+-
+-
+Photo of Mitchell Gibson
+Mitchell Gibson
+WSH - G
+375
+-
+-
+-
+Photo of Kirill Zarubin
+Kirill Zarubin
+CGY - G
+NA
+376
+-
+-
+-
+Photo of Alexis Cournoyer
+Alexis Cournoyer
+MTL - G
+377
+-
+-
+-
+Photo of Pavel Francouz
+Pavel Francouz
+COL - G
+NA
+378
+-
+-
+-
+Photo of Will Cranley
+Will Cranley
+STL - G
+379
+-
+-
+-
+Photo of Carl Lindbom
+Carl Lindbom
+VGK - G
+380
+-
+-
+-
+Photo of Troy Grosenick
+Troy Grosenick
+MIN - G
+NA
+381
+-
+-
+-
+Photo of Oscar Dansk
+Oscar Dansk
+ANA - G
+NA
+382
+-
+-
+-
+Photo of Gabriel Carriere
+Gabriel Carriere
+SJ - G
+383
+-
+-
+-
+Photo of Mikhail Yegorov
+Mikhail Yegorov
+NJ - G
+NA
+384
+-
+-
+-
+Photo of Kirill Gerasimyuk
+Kirill Gerasimyuk
+FLA - G
+385
+-
+-
+-
+Photo of Filip Larsson
+Filip Larsson
+PIT - G
+386
+-
+-
+-
+Photo of Carter George
+Carter George
+LA - G
+NA
+387
+-
+-
+-

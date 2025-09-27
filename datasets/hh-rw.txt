@@ -1,0 +1,1487 @@
+
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+1	Nikita Kucherov	RW	TB	78	20.7
+0.42
+1.03
+0.21
+3.10
+0.41
+0.55
+10.35
+2	Matthew Tkachuk 	LW,RW	FLA	60	18.3
+0.42
+0.67
+0.22
+3.02
+1.53
+0.40
+8.11
+3	David Pastrnak	RW	BOS	82	19.8
+0.55
+0.66
+0.13
+3.84
+0.79
+0.35
+8.00
+4	Mikko Rantanen	LW,RW	DAL	78	21.2
+0.46
+0.62
+0.13
+2.74
+0.64
+0.37
+5.44
+5	Mitch Marner	RW	VEG	78	21.1
+0.33
+0.83
+0.14
+2.08
+0.65
+0.37
+4.95
+6	Jason Robertson	LW,RW	DAL	82	18.0
+0.42
+0.62
+0.12
+2.62
+0.76
+0.37
+4.94
+7	Zach Hyman 	LW,RW	EDM	76	18.6
+0.47
+0.33
+0.32
+2.82
+0.87
+0.21
+4.79
+8	Sam Reinhart	C,RW	FLA	80	20.1
+0.46
+0.46
+0.18
+2.54
+1.14
+0.30
+4.72
+9	Alex Ovechkin	LW,RW	WAS	72	17.5
+0.49
+0.40
+-0.04
+3.21
+1.79
+0.31
+3.86
+10	Adrian Kempe	RW	LA	80	18.9
+0.41
+0.44
+0.13
+2.85
+1.29
+0.26
+3.84
+11	Seth Jarvis	C,LW,RW	CAR	77	19.5
+0.40
+0.43
+0.17
+2.56
+1.27
+0.25
+3.64
+12	J.T. Miller	C,RW	NYR	75	18.0
+0.32
+0.60
+0.03
+1.89
+2.32
+0.32
+3.46
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+13	Jesper Bratt	LW,RW	NJ	81	18.8
+0.32
+0.65
+0.06
+2.36
+1.00
+0.35
+3.43
+14	Brandon Hagel	LW,RW	TB	82	20.4
+0.42
+0.54
+0.23
+2.39
+0.76
+0.16
+3.42
+15	William Nylander	C,RW	TOR	82	19.3
+0.46
+0.59
+-0.01
+3.02
+0.22
+0.34
+3.26
+16	Andrei Svechnikov	LW,RW	CAR	73	17.3
+0.34
+0.48
+0.03
+2.52
+2.14
+0.29
+3.23
+17	Tage Thompson	C,RW	BUF	75	18.6
+0.48
+0.45
+0.03
+3.12
+0.93
+0.25
+3.22
+18	Matt Boldy	LW,RW	MIN	82	20.2
+0.42
+0.50
+0.04
+3.18
+0.66
+0.29
+3.20
+19	Martin Necas	RW	COL	78	18.7
+0.33
+0.55
+0.03
+2.60
+0.82
+0.33
+2.49
+20	Mathew Barzal	C,RW	NYI	78	20.0
+0.27
+0.62
+0.13
+2.47
+0.72
+0.24
+2.36
+21	Clayton Keller	LW,RW	UTA	80	19.2
+0.40
+0.63
+-0.04
+2.59
+0.19
+0.36
+2.26
+22	Valeri Nichushkin	LW,RW	COL	68	19.6
+0.41
+0.37
+0.06
+2.54
+1.25
+0.24
+1.94
+23	Dylan Guenther	RW	UTA	76	17.2
+0.41
+0.43
+-0.07
+2.79
+0.78
+0.37
+1.89
+24	Tom Wilson	RW	WAS	78	18.3
+0.33
+0.33
+0.04
+2.09
+2.81
+0.19
+1.74
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+25	Timo Meier	LW,RW	NJ	79	17.8
+0.38
+0.35
+-0.01
+3.01
+1.73
+0.20
+1.71
+26	Jordan Kyrou	RW	STL	82	17.6
+0.40
+0.44
+0.06
+2.78
+0.50
+0.23
+1.68
+27	Drake Batherson	LW,RW	OTT	82	18.1
+0.32
+0.49
+-0.07
+2.34
+1.65
+0.32
+1.37
+28	Wyatt Johnston	C,RW	DAL	82	19.0
+0.44
+0.44
+0.00
+2.52
+0.56
+0.27
+1.37
+29	Artturi Lehkonen	LW,RW	COL	75	20.0
+0.36
+0.37
+0.21
+2.09
+0.73
+0.16
+1.33
+30	Nikolaj Ehlers	LW,RW	CAR	78	15.6
+0.32
+0.49
+0.08
+2.53
+0.55
+0.24
+1.31
+31	Mark Stone	RW	VEG	78	18.9
+0.28
+0.56
+0.13
+1.90
+0.54
+0.24
+1.16
+32	Travis Konecny	LW,RW	PHI	82	20.4
+0.37
+0.54
+-0.02
+2.59
+1.10
+0.20
+1.14
+33	Cole Caufield	LW,RW	MON	82	18.4
+0.43
+0.35
+-0.01
+2.99
+0.74
+0.23
+1.13
+34	Lucas Raymond	RW	DET	82	18.9
+0.35
+0.55
+-0.07
+2.17
+0.60
+0.34
+0.76
+35	Matvei Michkov	RW	PHI	80	17.3
+0.38
+0.46
+0.00
+2.55
+0.38
+0.25
+0.62
+36	Kiefer Sherwood	RW	VAN	78	14.2
+0.21
+0.23
+0.03
+1.67
+4.96
+0.04
+0.55
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+37	Arseny Gritsyuk	RW	NJ	76	15.5
+0.30
+0.33
+0.03
+2.97
+1.66
+0.13
+0.54
+38	Mackie Samoskevich	RW	FLA	72	15.3
+0.32
+0.31
+0.03
+2.17
+2.10
+0.18
+0.47
+39	Alex Tuch	RW	BUF	81	18.9
+0.40
+0.42
+0.04
+2.37
+0.85
+0.16
+0.44
+40	Alex DeBrincat	LW,RW	DET	82	17.7
+0.39
+0.40
+-0.10
+2.73
+0.61
+0.31
+0.32
+41	Mats Zuccarello	RW	MIN	79	19.2
+0.23
+0.58
+0.00
+2.05
+0.48
+0.33
+0.31
+42	Pavel Buchnevich	C,LW,RW	STL	76	18.9
+0.32
+0.49
+0.09
+1.92
+0.61
+0.20
+0.25
+43	Pavel Dorofeyev	LW,RW	VEG	78	16.3
+0.39
+0.28
+0.08
+2.64
+0.37
+0.19
+0.05
+44	Rickard Rakell	C,LW,RW	PIT	80	18.5
+0.35
+0.34
+-0.01
+2.41
+1.53
+0.18
+0.03
+45	Bryan Rust	RW	PIT	71	19.2
+0.38
+0.42
+-0.06
+2.58
+0.92
+0.20
+-0.01
+46	Kirill Marchenko	RW	CBJ	79	18.4
+0.37
+0.34
+0.04
+2.46
+0.70
+0.19
+-0.05
+47	Jonathan Marchessault	RW	NAS	78	17.5
+0.36
+0.42
+-0.10
+2.54
+1.01
+0.26
+-0.09
+48	Cole Perfetti	C,LW,RW	WPG	80	16.2
+0.28
+0.40
+0.09
+2.00
+0.80
+0.21
+-0.17
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+49	Gabriel Vilardi	C,RW	WPG	79	17.9
+0.38
+0.39
+0.03
+1.96
+0.38
+0.24
+-0.36
+50	Tyler Seguin	C,RW	DAL	76	15.8
+0.32
+0.38
+0.13
+2.07
+0.49
+0.15
+-0.38
+51	Owen Tippett	LW,RW	PHI	78	16.3
+0.31
+0.28
+0.04
+2.64
+1.58
+0.10
+-0.39
+52	Matt Duchene	C,RW	DAL	81	16.8
+0.30
+0.49
+0.07
+1.79
+0.37
+0.21
+-0.42
+53	Steven Stamkos	C,LW,RW	NAS	81	17.6
+0.33
+0.46
+-0.14
+2.24
+0.85
+0.32
+-0.48
+54	Mika Zibanejad	C,RW	NYR	82	18.5
+0.31
+0.51
+-0.11
+2.28
+0.59
+0.31
+-0.50
+55	Stefan Noesen	LW,RW	NJ	78	14.8
+0.26
+0.30
+0.05
+1.83
+1.73
+0.21
+-0.54
+56	Juraj Slafkovsky	LW,RW	MON	79	17.6
+0.28
+0.39
+-0.08
+1.81
+2.28
+0.20
+-0.58
+57	Alex Laferriere	RW	LA	76	16.4
+0.28
+0.28
+0.08
+2.36
+1.59
+0.11
+-0.58
+58	Morgan Geekie	C,LW,RW	BOS	78	16.4
+0.31
+0.33
+0.08
+1.78
+1.42
+0.14
+-0.63
+59	Brock Boeser	RW	VAN	78	18.0
+0.33
+0.39
+-0.03
+2.01
+0.90
+0.24
+-0.64
+60	Warren Foegele	LW,RW	LA	82	15.6
+0.29
+0.28
+0.17
+2.27
+1.04
+0.05
+-0.70
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+61	Tyler Toffoli	LW,RW	SJ	75	16.5
+0.39
+0.36
+-0.11
+2.67
+0.72
+0.23
+-0.75
+62	Conor Garland	RW	VAN	80	17.8
+0.26
+0.41
+0.04
+2.20
+0.63
+0.20
+-0.83
+63	Blake Coleman	C,LW,RW	CGY	82	17.1
+0.27
+0.29
+0.05
+2.26
+1.88
+0.09
+-0.85
+64	Jake DeBrusk	LW,RW	VAN	80	16.6
+0.33
+0.30
+-0.01
+2.15
+1.20
+0.20
+-0.93
+65	Logan Stankoven	C,RW	CAR	77	15.6
+0.27
+0.35
+0.07
+2.34
+0.71
+0.16
+-0.93
+66	Trevor Moore	LW,RW	LA	75	16.7
+0.29
+0.31
+0.11
+2.31
+1.00
+0.08
+-0.96
+67	JJ Peterka	LW,RW	UTA	77	18.0
+0.34
+0.39
+-0.01
+2.35
+0.38
+0.20
+-1.06
+68	Nick Schmaltz	C,RW	UTA	82	18.5
+0.29
+0.51
+-0.04
+1.98
+0.18
+0.26
+-1.14
+69	Will Cuylle	LW,RW	NYR	81	14.8
+0.24
+0.22
+-0.03
+1.82
+3.59
+0.05
+-1.21
+70	Mikael Granlund	C,LW,RW	ANA	81	18.4
+0.20
+0.43
+0.11
+1.67
+0.74
+0.17
+-1.26
+71	Matt Savoie	C,RW	EDM	74	15.5
+0.23
+0.28
+0.12
+1.58
+1.65
+0.11
+-1.37
+72	Ville Koivunen	RW	PIT	76	16.5
+0.25
+0.37
+-0.03
+1.68
+1.75
+0.18
+-1.39
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+73	Adam Klapka	RW	CGY	58	11.8
+0.22
+0.19
+-0.02
+1.53
+4.02
+0.03
+-1.40
+74	Connor Bedard	C,RW	CHI	82	21.2
+0.38
+0.56
+-0.38
+2.77
+0.66
+0.34
+-1.53
+75	Ryan Leonard	RW	WAS	76	15.5
+0.25
+0.33
+0.03
+1.58
+1.65
+0.16
+-1.55
+76	Gabe Perreault	RW	NYR	75	15.5
+0.23
+0.33
+0.04
+1.57
+1.64
+0.16
+-1.56
+77	Patrick Kane	RW	DET	73	17.7
+0.29
+0.52
+-0.19
+2.36
+0.26
+0.32
+-1.72
+78	Alexis Lafreniere	LW,RW	NYR	82	17.9
+0.29
+0.38
+-0.06
+2.13
+1.44
+0.12
+-1.72
+79	Danila Yurov	RW	MIN	76	15.0
+0.22
+0.30
+0.05
+1.53
+1.59
+0.16
+-1.76
+80	Martin Pospisil	C,RW	CGY	78	13.8
+0.13
+0.26
+-0.01
+1.56
+3.71
+0.06
+-1.82
+81	Jackson Blake	RW	CAR	80	14.4
+0.30
+0.29
+0.10
+1.85
+0.25
+0.16
+-1.85
+82	Troy Terry	RW	ANA	75	18.7
+0.31
+0.49
+-0.09
+2.31
+0.13
+0.20
+-1.91
+83	Jonathan Drouin	LW,RW	NYI	72	17.7
+0.19
+0.51
+0.03
+1.33
+0.40
+0.24
+-2.01
+84	Claude Giroux	LW,RW	OTT	81	17.9
+0.24
+0.48
+-0.06
+1.77
+0.74
+0.22
+-2.01
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+85	Evan Rodrigues	C,LW,RW	FLA	82	15.1
+0.18
+0.26
+0.10
+1.98
+1.34
+0.11
+-2.03
+86	Nino Niederreiter	LW,RW	WPG	82	14.6
+0.23
+0.21
+0.07
+1.79
+1.77
+0.07
+-2.27
+87	Anthony Mantha	RW	PIT	78	15.6
+0.26
+0.31
+0.06
+1.59
+1.08
+0.12
+-2.29
+88	Yegor Chinakhov	LW,RW	CBJ	70	15.9
+0.27
+0.31
+-0.06
+2.10
+1.39
+0.13
+-2.29
+89	Tyson Foerster	LW,RW	PHI	80	17.2
+0.30
+0.25
+0.03
+1.86
+1.04
+0.13
+-2.30
+90	Ridly Greig	C,RW	OTT	77	16.9
+0.22
+0.29
+0.00
+1.66
+1.78
+0.13
+-2.34
+91	Eeli Tolvanen	LW,RW	SEA	80	14.6
+0.26
+0.20
+-0.04
+1.66
+2.65
+0.08
+-2.38
+92	Viktor Arvidsson	LW,RW	BOS	78	15.0
+0.24
+0.30
+0.05
+2.30
+0.46
+0.12
+-2.42
+93	Zack Bolduc	RW	MON	75	13.2
+0.25
+0.25
+0.04
+1.67
+1.25
+0.13
+-2.43
+94	Patrik Laine	LW,RW	MON	72	14.8
+0.32
+0.32
+-0.14
+2.21
+0.49
+0.26
+-2.48
+95	Jimmy Snuggerud	RW	STL	76	15.2
+0.22
+0.30
+-0.03
+1.55
+1.62
+0.16
+-2.58
+96	Kent Johnson	C,LW,RW	CBJ	78	17.1
+0.28
+0.41
+-0.04
+1.74
+0.14
+0.21
+-2.70
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+97	Matt Coronato	RW	CGY	74	17.3
+0.28
+0.34
+-0.10
+2.27
+0.43
+0.20
+-2.72
+98	Jake Neighbours	LW,RW	STL	82	16.1
+0.28
+0.27
+-0.11
+1.56
+2.00
+0.16
+-2.78
+99	Maxim Tsyplakov	LW,RW	NYI	78	15.0
+0.18
+0.30
+0.05
+1.58
+1.77
+0.06
+-2.80
+100	Oliver Bjorkstrand	RW	TB	78	15.0
+0.23
+0.36
+-0.06
+1.90
+0.89
+0.18
+-2.85
+101	Will Smith	C,RW	SJ	75	17.3
+0.32
+0.43
+-0.17
+1.96
+0.20
+0.27
+-2.86
+102	Connor Zary	C,LW,RW	CGY	75	16.3
+0.28
+0.33
+-0.03
+1.85
+0.49
+0.16
+-2.91
+103	Lawson Crouse	LW,RW	UTA	80	14.5
+0.23
+0.20
+-0.01
+1.63
+2.30
+0.06
+-3.01
+104	Sam Colangelo	RW	ANA	74	12.9
+0.28
+0.20
+-0.04
+1.42
+2.11
+0.10
+-3.03
+105	Andrei Kuzmenko	LW,RW	LA	70	15.4
+0.26
+0.36
+0.01
+1.37
+0.27
+0.20
+-3.04
+106	Josh Doan	RW	BUF	76	14.0
+0.21
+0.28
+0.03
+1.86
+0.91
+0.12
+-3.11
+107	Fabian Zetterlund	LW,RW	OTT	82	16.6
+0.24
+0.26
+-0.11
+2.11
+1.62
+0.13
+-3.12
+108	Jack Quinn	RW	BUF	76	15.3
+0.26
+0.36
+-0.07
+1.84
+0.67
+0.16
+-3.17
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+109	Victor Olofsson	LW,RW	COL	70	14.0
+0.23
+0.24
+0.09
+1.71
+0.44
+0.11
+-3.28
+110	Bobby Brink	RW	PHI	77	15.0
+0.21
+0.31
+0.04
+1.40
+1.09
+0.10
+-3.29
+111	Jordan Eberle	RW	SEA	81	16.0
+0.21
+0.37
+0.03
+1.65
+0.37
+0.14
+-3.32
+112	Dawson Mercer	C,RW	NJ	82	18.1
+0.29
+0.27
+-0.01
+1.78
+0.48
+0.12
+-3.50
+113	Garnet Hathaway	RW	PHI	80	11.7
+0.13
+0.13
+0.04
+1.08
+3.56
+0.00
+-3.50
+114	Mathieu Olivier	RW	CBJ	78	14.0
+0.15
+0.19
+-0.05
+1.24
+3.46
+0.03
+-3.51
+115	Vasily Podkolzin	LW,RW	EDM	74	13.4
+0.14
+0.20
+0.04
+1.34
+2.58
+0.03
+-3.51
+116	Ryan Hartman	C,RW	MIN	72	15.1
+0.22
+0.25
+-0.03
+2.08
+1.03
+0.10
+-3.53
+117	Kyle Palmieri	RW	NYI	82	17.8
+0.31
+0.29
+-0.13
+2.09
+0.84
+0.13
+-3.65
+118	Trent Frederic	C,LW,RW	EDM	76	13.8
+0.20
+0.21
+-0.05
+1.42
+2.45
+0.07
+-3.69
+119	Luke Evangelista	RW	NAS	76	14.5
+0.21
+0.30
+0.03
+1.91
+0.42
+0.09
+-3.72
+120	Aliaksei Protas	LW,RW	WAS	76	16.1
+0.25
+0.32
+0.07
+1.75
+0.40
+0.03
+-3.72
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+121	David Perron	LW,RW	OTT	72	14.0
+0.19
+0.26
+-0.06
+1.56
+1.50
+0.14
+-3.73
+122	Ryan Donato	C,LW,RW	CHI	79	15.7
+0.28
+0.29
+-0.15
+2.05
+1.29
+0.11
+-3.77
+123	Reilly Smith	RW	VEG	80	15.2
+0.19
+0.31
+0.08
+1.55
+0.64
+0.06
+-3.78
+124	Marc Gatcomb	RW	NYI	53	9.9
+0.17
+0.09
+-0.02
+1.00
+3.74
+0.00
+-3.84
+125	Ivan Demidov	RW	MON	76	14.5
+0.26
+0.32
+0.04
+1.92
+0.46
+0.00
+-3.85
+126	Alex Killorn	C,LW,RW	ANA	80	16.9
+0.25
+0.29
+-0.01
+1.61
+0.93
+0.08
+-3.86
+127	Nicolas Roy	C,RW	TOR	80	15.4
+0.23
+0.26
+0.01
+1.43
+1.06
+0.09
+-3.89
+128	Nicholas Robertson	RW	TOR	73	12.4
+0.23
+0.21
+0.01
+1.71
+1.01
+0.08
+-3.89
+129	Jean-Gabriel Pageau	C,RW	NYI	77	16.5
+0.17
+0.30
+-0.03
+1.38
+1.91
+0.05
+-3.94
+130	Rutger McGroarty	RW	PIT	76	13.8
+0.20
+0.26
+-0.03
+1.41
+1.46
+0.09
+-4.06
+131	Philip Tomasino	C,RW	PIT	63	13.6
+0.21
+0.30
+-0.06
+1.62
+0.92
+0.14
+-4.06
+132	Teuvo Teravainen	LW,RW	CHI	81	16.7
+0.19
+0.41
+-0.07
+1.47
+0.30
+0.21
+-4.07
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+133	Arthur Kaliyev	RW	OTT	64	12.6
+0.22
+0.22
+0.00
+1.78
+0.56
+0.13
+-4.14
+134	Kaapo Kakko	RW	SEA	80	15.8
+0.23
+0.30
+-0.03
+1.59
+0.75
+0.10
+-4.14
+135	Jonathan Lekkerimaki	RW	VAN	72	13.1
+0.21
+0.28
+-0.03
+1.44
+0.68
+0.15
+-4.24
+136	Alex Iafallo	C,LW,RW	WPG	82	13.3
+0.17
+0.20
+0.11
+1.35
+0.59
+0.10
+-4.25
+137	Keegan Kolesar	RW	VEG	81	12.9
+0.14
+0.19
+-0.03
+1.01
+3.14
+0.01
+-4.25
+138	Vladimir Tarasenko	LW,RW	MIN	80	14.7
+0.20
+0.34
+-0.06
+1.63
+0.85
+0.11
+-4.26
+139	Joel Farabee	LW,RW	CGY	80	15.4
+0.21
+0.26
+-0.03
+1.76
+1.06
+0.05
+-4.32
+140	Tanner Jeannot	LW,RW	BOS	77	11.5
+0.12
+0.14
+-0.01
+0.96
+3.23
+0.03
+-4.35
+141	Valtteri Puustinen	RW	PIT	36	12.1
+0.17
+0.28
+0.03
+1.47
+0.83
+0.08
+-4.38
+142	Mark Kastelic	C,RW	BOS	72	10.6
+0.13
+0.14
+-0.04
+1.14
+3.19
+0.03
+-4.42
+143	Michael Amadio	RW	OTT	78	13.8
+0.18
+0.21
+0.06
+1.28
+1.27
+0.04
+-4.46
+144	Jack Roslovic	C,RW	CAR	79	14.1
+0.22
+0.30
+0.00
+1.63
+0.28
+0.09
+-4.55
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+145	Joshua Roy	RW	MON	34	12.9
+0.24
+0.27
+-0.03
+1.68
+0.56
+0.09
+-4.55
+146	Andrew Mangiapane	LW,RW	EDM	78	13.5
+0.18
+0.23
+0.05
+1.28
+0.95
+0.06
+-4.60
+147	Charlie Coyle	C,RW	CBJ	82	15.9
+0.20
+0.29
+-0.01
+1.31
+1.22
+0.04
+-4.68
+148	Carl Grundstrom	RW	SJ	67	9.9
+0.12
+0.13
+-0.05
+1.45
+2.79
+0.02
+-4.74
+149	Kirby Dach	C,RW	MON	80	15.7
+0.21
+0.26
+-0.18
+1.46
+1.56
+0.16
+-4.74
+150	Brendan Gallagher	RW	MON	81	13.6
+0.24
+0.19
+-0.06
+1.82
+0.96
+0.09
+-4.74
+151	Cole Sillinger	C,RW	CBJ	76	17.2
+0.20
+0.28
+-0.15
+1.95
+1.33
+0.09
+-4.76
+152	Tyler Bertuzzi	LW,RW	CHI	80	15.7
+0.26
+0.28
+-0.19
+1.71
+0.85
+0.18
+-4.82
+153	Gustav Nyquist	LW,RW	WPG	78	16.6
+0.19
+0.36
+-0.06
+1.49
+0.58
+0.10
+-4.82
+154	Ilya Mikheyev	RW	CHI	80	15.3
+0.21
+0.21
+0.06
+1.63
+0.43
+0.03
+-4.83
+155	Yegor Sharangovich	C,LW,RW	CGY	76	16.8
+0.26
+0.30
+-0.15
+1.86
+0.22
+0.16
+-4.91
+156	Liam O'Brien	LW,RW	UTA	55	9.7
+0.09
+0.13
+-0.02
+0.96
+3.26
+0.00
+-4.93
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+157	Cody Glass	C,RW	NJ	75	14.7
+0.17
+0.25
+-0.01
+1.63
+0.89
+0.05
+-4.94
+158	Mason Appleton	C,RW	DET	80	15.0
+0.15
+0.24
+0.04
+1.43
+1.09
+0.03
+-4.94
+159	Justin Brazeau	RW	PIT	71	11.8
+0.17
+0.18
+-0.03
+1.21
+1.72
+0.07
+-4.95
+160	Mitchell Chaffee	RW	TB	66	11.9
+0.17
+0.15
+-0.06
+1.00
+2.18
+0.08
+-5.19
+161	Josh Anderson	RW	MON	80	14.3
+0.19
+0.14
+-0.06
+1.43
+2.04
+0.03
+-5.20
+162	Brandon Duhaime	RW	WAS	81	12.9
+0.14
+0.11
+0.00
+1.24
+2.25
+0.01
+-5.21
+163	Evgenii Dadonov	RW	NJ	80	13.2
+0.20
+0.24
+0.00
+1.38
+0.55
+0.08
+-5.21
+164	Matt Rempe	RW	NYR	49	8.9
+0.12
+0.14
+-0.02
+0.84
+2.80
+0.00
+-5.33
+165	Collin Graf	RW	SJ	74	16.3
+0.20
+0.26
+-0.07
+1.34
+0.61
+0.12
+-5.38
+166	Adam Gaudette	C,RW	SJ	81	10.3
+0.22
+0.15
+0.01
+1.09
+0.82
+0.09
+-5.40
+167	Simon Holmstrom	RW	NYI	78	16.5
+0.24
+0.28
+-0.08
+1.31
+0.35
+0.12
+-5.41
+168	Alexey Toropchenko	RW	STL	78	12.7
+0.13
+0.14
+-0.06
+1.18
+2.51
+0.03
+-5.43
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+169	Mavrik Bourque	C,RW	DAL	75	13.0
+0.20
+0.20
+0.03
+1.21
+0.61
+0.05
+-5.49
+170	Justin Danforth	RW	BUF	77	14.0
+0.16
+0.18
+-0.05
+1.27
+1.86
+0.03
+-5.50
+171	Corey Perry	RW	LA	77	11.7
+0.18
+0.18
+0.04
+1.18
+0.51
+0.08
+-5.55
+172	Brandon Tanev	LW,RW	UTA	77	13.2
+0.14
+0.16
+-0.03
+1.17
+2.07
+0.00
+-5.60
+173	Mathieu Joseph	RW	STL	66	12.6
+0.11
+0.18
+-0.02
+1.17
+1.80
+0.03
+-5.67
+174	Logan O'Connor 	RW	COL	72	14.2
+0.15
+0.18
+0.06
+1.18
+0.94
+0.01
+-5.67
+175	Kailer Yamamoto	RW	UTA	36	13.2
+0.17
+0.19
+0.00
+1.14
+0.78
+0.08
+-5.72
+176	Jakob Pelletier	LW,RW	TB	58	12.2
+0.16
+0.22
+0.00
+1.21
+0.91
+0.03
+-5.84
+177	Nathan Bastian	RW	DAL	75	11.0
+0.11
+0.15
+-0.04
+0.92
+2.33
+0.03
+-5.86
+178	Alexander Kerfoot	C,LW,RW	UTA	80	15.2
+0.15
+0.26
+-0.03
+1.23
+0.73
+0.04
+-6.10
+179	Pontus Holmberg	RW	TB	72	12.6
+0.14
+0.21
+0.04
+1.00
+0.74
+0.03
+-6.15
+180	Steven Lorentz	LW,RW	TOR	75	10.4
+0.09
+0.12
+-0.03
+0.95
+2.21
+0.01
+-6.24
+R#	PLAYER	POS	TEAM	GP	TOI	G	A	+/-	SOG	HIT	PPP	TOTAL
+181	Alexandre Texier	LW,RW	STL	51	13.2
+0.18
+0.22
+-0.08
+1.47
+0.69
+0.06
+-6.28
+182	Joel Armia	RW	LA	77	14.2
+0.16
+0.18
+-0.05
+1.39
+0.96
+0.04
+-6.32
+183	Oliver Wahlstrom	RW	BOS	52	10.8
+0.14
+0.17
+-0.06
+1.29
+0.94
+0.08
+-6.42
+184	Alexander Holtz	RW	VEG	64	11.9
+0.16
+0.19
+-0.05
+1.34
+0.66
