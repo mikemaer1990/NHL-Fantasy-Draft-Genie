@@ -80,6 +80,8 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             padding: 20px;
             overflow-y: auto;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .panel h2 {
@@ -112,6 +114,7 @@
         .section {
             margin-bottom: 30px;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .section h3 {
@@ -325,41 +328,72 @@
 
         /* Tab styling */
         .tab-nav {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            width: 100%;
             background: #f8f9fa;
             border-radius: 8px;
-            padding: 4px;
+            padding: 3px;
             margin-bottom: 20px;
             border: 1px solid #e9ecef;
-            overflow-x: auto;
-            gap: 2px;
+            gap: 4px;
+            box-sizing: border-box;
         }
 
         .tab-btn {
-            flex: 1;
-            min-width: 100px;
-            padding: 10px 12px;
-            border: none;
+            padding: 8px 6px;
+            border: 1px solid transparent;
             background: transparent;
             color: #6c757d;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
             white-space: nowrap;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            position: relative;
         }
 
         .tab-btn:hover {
-            background: #e9ecef;
-            color: #495057;
+            background: linear-gradient(135deg, #f1f3f4 0%, #e9ecef 100%);
+            color: #2a5298;
+            border: 1px solid transparent;
+            box-shadow:
+                0 4px 12px rgba(42, 82, 152, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                inset 0 0 0 1px #2a5298;
+            z-index: 10;
         }
 
         .tab-btn.active {
-            background: #2a5298;
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
             color: white;
-            box-shadow: 0 2px 8px rgba(42, 82, 152, 0.3);
+            border: 1px solid transparent;
+            box-shadow:
+                0 4px 16px rgba(42, 82, 152, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                inset 0 0 0 1px #1e3c72;
+            z-index: 5;
+        }
+
+        .tab-btn:focus {
+            outline: 2px solid #2a5298;
+            outline-offset: 2px;
+            z-index: 15;
+        }
+
+        .tab-btn:focus:not(:hover) {
+            border: 1px solid transparent;
+            box-shadow: inset 0 0 0 1px #2a5298;
+        }
+
+        .tab-btn .tab-icon {
+            font-size: 0.9rem;
         }
 
         .tab-content {
@@ -376,15 +410,16 @@
         .tab-pane.active {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: stretch;
             width: 100%;
-            margin: 0 auto;
+            margin: 0;
             overflow: visible;
         }
 
         .tab-pane .player-card {
             width: 100%;
             max-width: 600px;
+            margin: 0 auto;
         }
 
         /* Scarcity badge styling */
@@ -494,16 +529,38 @@
 
         /* Responsive styling for mobile */
         @media (max-width: 768px) {
-
             .tab-nav {
+                grid-template-columns: repeat(7, 1fr);
                 padding: 2px;
+                gap: 2px;
+            }
+
+            .tab-btn {
+                padding: 6px 4px;
+                font-size: 0.75rem;
+                gap: 2px;
+            }
+
+            .tab-btn .tab-icon {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* For very small screens, wrap to 2 rows */
+        @media (max-width: 480px) {
+            .tab-nav {
+                grid-template-columns: repeat(4, 1fr);
                 gap: 1px;
             }
 
             .tab-btn {
-                min-width: 80px;
-                padding: 8px 12px;
-                font-size: 0.8rem;
+                padding: 5px 2px;
+                font-size: 0.7rem;
+                gap: 1px;
+            }
+
+            .tab-btn .tab-icon {
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -530,25 +587,39 @@
 
 
                     <!-- Tab navigation -->
-                    <div class="tab-nav" id="tabNav" style="display: none;">
-                        <button class="tab-btn active" data-tab="overall">Overall</button>
-                        <button class="tab-btn" data-tab="smart">Smart</button>
-                        <button class="tab-btn" data-tab="C">C</button>
-                        <button class="tab-btn" data-tab="LW">LW</button>
-                        <button class="tab-btn" data-tab="RW">RW</button>
-                        <button class="tab-btn" data-tab="D">D</button>
-                        <button class="tab-btn" data-tab="G">G</button>
+                    <div class="tab-nav" id="tabNav" style="display: none;" role="tablist" aria-label="Player filters">
+                        <button class="tab-btn active" data-tab="overall" role="tab" aria-selected="true" aria-controls="tab-overall">
+                            <span class="tab-icon">📊</span>Overall
+                        </button>
+                        <button class="tab-btn" data-tab="smart" role="tab" aria-selected="false" aria-controls="tab-smart">
+                            <span class="tab-icon">🎯</span>Smart
+                        </button>
+                        <button class="tab-btn" data-tab="C" role="tab" aria-selected="false" aria-controls="tab-C">
+                            <span class="tab-icon">⚡</span>C
+                        </button>
+                        <button class="tab-btn" data-tab="LW" role="tab" aria-selected="false" aria-controls="tab-LW">
+                            <span class="tab-icon">🏒</span>LW
+                        </button>
+                        <button class="tab-btn" data-tab="RW" role="tab" aria-selected="false" aria-controls="tab-RW">
+                            <span class="tab-icon">🏒</span>RW
+                        </button>
+                        <button class="tab-btn" data-tab="D" role="tab" aria-selected="false" aria-controls="tab-D">
+                            <span class="tab-icon">🛡️</span>D
+                        </button>
+                        <button class="tab-btn" data-tab="G" role="tab" aria-selected="false" aria-controls="tab-G">
+                            <span class="tab-icon">🥅</span>G
+                        </button>
                     </div>
 
                     <!-- Tab content -->
                     <div class="tab-content" id="tabContent" style="display: none;">
-                        <div class="tab-pane active" id="tab-overall"></div>
-                        <div class="tab-pane" id="tab-smart"></div>
-                        <div class="tab-pane" id="tab-C"></div>
-                        <div class="tab-pane" id="tab-LW"></div>
-                        <div class="tab-pane" id="tab-RW"></div>
-                        <div class="tab-pane" id="tab-D"></div>
-                        <div class="tab-pane" id="tab-G"></div>
+                        <div class="tab-pane active" id="tab-overall" role="tabpanel" aria-labelledby="tab-overall" tabindex="0"></div>
+                        <div class="tab-pane" id="tab-smart" role="tabpanel" aria-labelledby="tab-smart" tabindex="0"></div>
+                        <div class="tab-pane" id="tab-C" role="tabpanel" aria-labelledby="tab-C" tabindex="0"></div>
+                        <div class="tab-pane" id="tab-LW" role="tabpanel" aria-labelledby="tab-LW" tabindex="0"></div>
+                        <div class="tab-pane" id="tab-RW" role="tabpanel" aria-labelledby="tab-RW" tabindex="0"></div>
+                        <div class="tab-pane" id="tab-D" role="tabpanel" aria-labelledby="tab-D" tabindex="0"></div>
+                        <div class="tab-pane" id="tab-G" role="tabpanel" aria-labelledby="tab-G" tabindex="0"></div>
                     </div>
                 </div>
             </div>
@@ -682,7 +753,7 @@
 
         function createPlayerCard(player, showValueScore = false) {
             const positions = player.dualEligible ?
-                player.espnPosition.split(',').map(p => p.trim()).join('/') :
+                (player.espnPosition.includes(',') ? player.espnPosition.split(',').map(p => p.trim()).join('/') : player.espnPosition) :
                 player.position;
 
             const scarcityBadge = getScarcityBadge(player);
@@ -776,7 +847,11 @@
         function getRemainingElitePlayers(position) {
             return availablePlayers.filter(player => {
                 if (player.dualEligible) {
-                    if (!player.espnPosition.includes(position)) return false;
+                    // Handle both comma-separated and single position formats
+                    const eligiblePositions = player.espnPosition.includes(',') ?
+                        player.espnPosition.split(',').map(p => p.trim()) :
+                        [player.espnPosition];
+                    if (!eligiblePositions.includes(position)) return false;
                 } else if (player.position !== position) {
                     return false;
                 }
@@ -869,7 +944,11 @@
                     const bestAvailable = availablePlayers
                         .filter(player => {
                             if (player.dualEligible) {
-                                return player.espnPosition.includes(position);
+                                // Handle both comma-separated and single position formats
+                                const eligiblePositions = player.espnPosition.includes(',') ?
+                                    player.espnPosition.split(',').map(p => p.trim()) :
+                                    [player.espnPosition];
+                                return eligiblePositions.includes(position);
                             }
                             return player.position === position;
                         })
@@ -932,8 +1011,11 @@
             // Update tab buttons
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
             });
-            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+            const activeBtn = document.querySelector(`[data-tab="${tabName}"]`);
+            activeBtn.classList.add('active');
+            activeBtn.setAttribute('aria-selected', 'true');
 
             // Update tab panes
             document.querySelectorAll('.tab-pane').forEach(pane => {
@@ -1015,7 +1097,11 @@
                         if (topPicks.slice(0, 5).some(tp => tp.id === player.id)) return false;
 
                         if (player.dualEligible) {
-                            return player.espnPosition.includes(position);
+                            // Handle both comma-separated and single position formats
+                            const eligiblePositions = player.espnPosition.includes(',') ?
+                                player.espnPosition.split(',').map(p => p.trim()) :
+                                [player.espnPosition];
+                            return eligiblePositions.includes(position);
                         }
                         return player.position === position;
                     })
@@ -1041,7 +1127,11 @@
             const positionPlayers = availablePlayers
                 .filter(player => {
                     if (player.dualEligible) {
-                        return player.espnPosition.includes(position);
+                        // Handle both comma-separated and single position formats
+                        const eligiblePositions = player.espnPosition.includes(',') ?
+                            player.espnPosition.split(',').map(p => p.trim()) :
+                            [player.espnPosition];
+                        return eligiblePositions.includes(position);
                     }
                     return player.position === position;
                 })
@@ -1072,7 +1162,7 @@
 
         function assignToRoster(player) {
             const positions = player.dualEligible ?
-                player.espnPosition.split(',').map(p => p.trim()) :
+                (player.espnPosition.includes(',') ? player.espnPosition.split(',').map(p => p.trim()) : [player.espnPosition]) :
                 [player.position];
 
             for (const position of positions) {
@@ -1136,7 +1226,7 @@
                 document.getElementById('tabContent').style.display = 'none';
             } else {
                 // Show tabs when data is loaded
-                document.getElementById('tabNav').style.display = 'flex';
+                document.getElementById('tabNav').style.display = 'grid';
                 document.getElementById('tabContent').style.display = 'block';
                 updateTabContent();
             }
@@ -1176,8 +1266,40 @@
             // Add tab click event listeners
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
-                    const tabName = e.target.getAttribute('data-tab');
+                    const tabName = e.currentTarget.getAttribute('data-tab');
                     switchTab(tabName);
+                });
+
+                // Add keyboard navigation
+                btn.addEventListener('keydown', (e) => {
+                    const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+                    const currentIndex = tabs.indexOf(e.target);
+                    let nextIndex;
+
+                    switch(e.key) {
+                        case 'ArrowLeft':
+                            e.preventDefault();
+                            nextIndex = currentIndex > 0 ? currentIndex - 1 : tabs.length - 1;
+                            tabs[nextIndex].focus();
+                            switchTab(tabs[nextIndex].getAttribute('data-tab'));
+                            break;
+                        case 'ArrowRight':
+                            e.preventDefault();
+                            nextIndex = currentIndex < tabs.length - 1 ? currentIndex + 1 : 0;
+                            tabs[nextIndex].focus();
+                            switchTab(tabs[nextIndex].getAttribute('data-tab'));
+                            break;
+                        case 'Home':
+                            e.preventDefault();
+                            tabs[0].focus();
+                            switchTab(tabs[0].getAttribute('data-tab'));
+                            break;
+                        case 'End':
+                            e.preventDefault();
+                            tabs[tabs.length - 1].focus();
+                            switchTab(tabs[tabs.length - 1].getAttribute('data-tab'));
+                            break;
+                    }
                 });
             });
         });
