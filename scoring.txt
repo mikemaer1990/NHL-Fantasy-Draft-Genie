@@ -1,0 +1,17 @@
+Skater
+Goals (G)3
+Assists (A)2
+Plus/Minus (+/-)0.5
+Penalty Minutes (PIM)0.5
+Power Play Goals (PPG)1
+Power Play Assists (PPA)1
+Short Handed Goals (SHG)2
+Hat Tricks (HAT)2
+Hits (HIT)0.1
+Blocked Shots (BLK)0.3
+Goaltender
+Wins (W)5
+Goals Against (GA)-0.5
+Saves (SV)0.1
+Shutouts (SO)5
+Overtime Losses (OTL)2.5

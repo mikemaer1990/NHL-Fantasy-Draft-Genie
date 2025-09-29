@@ -794,11 +794,11 @@
 
         // Position scarcity scoring system
         const positionScarcity = {
-            G: 5.0,    // Goalies - Hardest to find elite players
-            D: 4.0,    // Defense - Very limited elite producers
-            LW: 3.0,   // Left Wing - Fewer top options than C/RW
-            RW: 2.0,   // Right Wing - Decent depth but limited elite
-            C: 1.0     // Centers - Most available fantasy options
+            G: 4.0,    // Goalies - Unique scoring, only 2 roster spots
+            D: 3.5,    // Defense - Blocks/hits bonuses + limited elite producers
+            LW: 3.0,   // Left Wing - Rare elite talent at this position
+            C: 2.0,    // Centers - Most depth but high value
+            RW: 1.5    // Right Wing - More elite options than LW
         };
 
         function calculateValueScore(player) {
@@ -835,13 +835,8 @@
             const position = player.position;
             const rank = player.positionRank;
 
-            // Define elite thresholds for each position
-            if (position === 'G') return rank <= 8;
-            if (position === 'D') return rank <= 12;
-            if (position === 'LW') return rank <= 10;
-            if (position === 'RW') return rank <= 8;
-            if (position === 'C') return rank <= 12;
-            return false;
+            // Use consistent elite thresholds from getEliteThreshold function
+            return rank <= getEliteThreshold(position);
         }
 
         function getRemainingElitePlayers(position) {
@@ -856,13 +851,8 @@
                     return false;
                 }
 
-                // Define what counts as "elite" for each position
-                if (position === 'G') return player.positionRank <= 8;
-                if (position === 'D') return player.positionRank <= 12;
-                if (position === 'LW') return player.positionRank <= 10;
-                if (position === 'RW') return player.positionRank <= 8;
-                if (position === 'C') return player.positionRank <= 5;
-                return false;
+                // Use consistent elite thresholds from getEliteThreshold function
+                return player.positionRank <= getEliteThreshold(position);
             }).length;
         }
 
@@ -894,13 +884,8 @@
             const remaining = getRemainingElitePlayers(position);
             const rank = player.positionRank;
 
-            // Only show urgency for elite players
-            let isElite = false;
-            if (position === 'G' && rank <= 8) isElite = true;
-            if (position === 'D' && rank <= 12) isElite = true;
-            if (position === 'LW' && rank <= 10) isElite = true;
-            if (position === 'RW' && rank <= 8) isElite = true;
-            if (position === 'C' && rank <= 5) isElite = true;
+            // Only show urgency for elite players using consistent thresholds
+            const isElite = rank <= getEliteThreshold(position);
 
             if (!isElite) return null;
 
@@ -918,11 +903,14 @@
             // Don't show scarcity badges for filled positions
             if (isPositionFilled(position)) return null;
 
-            if (position === 'G' && rank <= 8) return { text: 'Elite G!', class: 'badge-elite-g' };
-            if (position === 'D' && rank <= 12) return { text: 'Rare D!', class: 'badge-rare-d' };
-            if (position === 'LW' && rank <= 10) return { text: 'Top LW!', class: 'badge-top-lw' };
-            if (position === 'RW' && rank <= 8) return { text: 'Elite RW!', class: 'badge-elite-rw' };
-            if (position === 'C' && rank <= 5) return { text: 'Elite C!', class: 'badge-elite-c' };
+            // Use consistent elite thresholds for all positions
+            if (rank <= getEliteThreshold(position)) {
+                if (position === 'G') return { text: 'Elite G!', class: 'badge-elite-g' };
+                if (position === 'D') return { text: 'Rare D!', class: 'badge-rare-d' };
+                if (position === 'LW') return { text: 'Top LW!', class: 'badge-top-lw' };
+                if (position === 'RW') return { text: 'Elite RW!', class: 'badge-elite-rw' };
+                if (position === 'C') return { text: 'Elite C!', class: 'badge-elite-c' };
+            }
 
             return null;
         }
@@ -955,13 +943,32 @@
                         .sort((a, b) => a.positionRank - b.positionRank)[0];
 
                     if (bestAvailable) {
+                        // Calculate position scarcity priority score
+                        const scarcityMultiplier = positionScarcity[position] || 1.0;
+                        const isElitePlayer = bestAvailable.positionRank <= getEliteThreshold(position);
+
+                        // Base urgency from remaining elite players
+                        let urgencyScore = 0;
+                        if (eliteLeft <= 1) urgencyScore = 5;
+                        else if (eliteLeft <= 2) urgencyScore = 4;
+                        else if (eliteLeft <= 4) urgencyScore = 3;
+                        else if (eliteLeft <= 6) urgencyScore = 2;
+                        else urgencyScore = 1;
+
+                        // Apply scarcity multiplier - G and D get higher priority
+                        const finalScore = urgencyScore * scarcityMultiplier;
+
                         let priority = 'low';
                         let message = '';
 
-                        if (eliteLeft <= 2 && bestAvailable.positionRank <= getEliteThreshold(position)) {
+                        // Determine priority based on final score and elite status
+                        if (finalScore >= 15 && isElitePlayer) {
                             priority = 'high';
                             message = `URGENT: Only ${eliteLeft} elite ${position}s left! Consider ${bestAvailable.name}`;
-                        } else if (eliteLeft <= 4 && bestAvailable.positionRank <= getEliteThreshold(position)) {
+                        } else if (finalScore >= 10 && isElitePlayer) {
+                            priority = 'high';
+                            message = `HIGH PRIORITY: ${position} scarcity! ${bestAvailable.name} available (#${bestAvailable.positionRank})`;
+                        } else if (finalScore >= 6 || (finalScore >= 4 && isElitePlayer)) {
                             priority = 'medium';
                             message = `${eliteLeft} quality ${position}s remain. ${bestAvailable.name} is available`;
                         } else if (remaining >= 2) {
@@ -970,21 +977,32 @@
                         }
 
                         if (message) {
-                            recommendations.push({ message, priority, position });
+                            recommendations.push({
+                                message,
+                                priority,
+                                position,
+                                scarcityScore: finalScore,
+                                player: bestAvailable
+                            });
                         }
                     }
                 }
             }
 
-            // Sort by priority (high -> medium -> low)
+            // Sort by scarcity score first, then by priority
             return recommendations.sort((a, b) => {
+                // First sort by scarcity score (higher = more urgent)
+                if (b.scarcityScore !== a.scarcityScore) {
+                    return b.scarcityScore - a.scarcityScore;
+                }
+                // Then by priority as tiebreaker
                 const priorityOrder = { high: 0, medium: 1, low: 2 };
                 return priorityOrder[a.priority] - priorityOrder[b.priority];
             });
         }
 
         function getEliteThreshold(position) {
-            const thresholds = { G: 8, D: 12, LW: 10, RW: 8, C: 5 };
+            const thresholds = { G: 6, LW: 8, D: 10, RW: 12, C: 15 };
             return thresholds[position] || 10;
         }
 
